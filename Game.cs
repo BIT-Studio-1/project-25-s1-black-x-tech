@@ -38,10 +38,22 @@ namespace studioTeam
 
             // Frame 4
             Console.Clear();
-            Console.WriteLine("Hello, Welcome to Black X Tech!");
-            Console.WriteLine("\nAnimation Frame:");
-            Console.WriteLine("    \\");
-            Thread.Sleep(200);
+            Console.WriteLine("    _____             ");
+            Console.WriteLine("   /     \\           ");
+            Console.WriteLine("  |  o o  |          ");
+            Console.WriteLine("  |   ^   |          ");
+            Console.WriteLine("   \\ \\_/ /          ");
+            Console.WriteLine("    -----            ");
+            Console.WriteLine("     |||             ");
+            Console.WriteLine("    / | \\           ");
+            Console.WriteLine("   /  |  \\          ");
+            Console.WriteLine("      |              ");
+            Console.WriteLine("     / \\            ");
+            Console.WriteLine("    /   \\           ");
+            Console.WriteLine("   /     \\          ");
+           
+            Thread.Sleep(9000);
+            Console.ReadLine();
 
             // Frame 5
             Console.Clear();
