@@ -24,33 +24,34 @@ namespace studioTeam
 
             // Frame 2
             Console.Clear();
-            Console.WriteLine("Hello, Welcome to Black X Tech!");
-            Console.WriteLine("\nAnimation Frame:");
-            Console.WriteLine("    /");
-            Thread.Sleep(200);
-
-            // Frame 3
-            Console.Clear();
-            Console.WriteLine(@"
-
-
-
-                            |>>>                     |>>>
-                            |                        |
-                        _  _|_  _                _  _|_  _
-                       | |_| |_| |              | |_| |_| |
-                       \  .      /              \  .      /
-                        \_______/                \_______/
-                         |     |-----.      .----|     |
-                         |     |     |      |    |     |
-                         |     |     |      |    |     |
-                         |     |     |      |    |     |
-                        _|_____|_____|__  __|____|_____|_
-                       |________________||________________|
-");
+            Console.WriteLine(@"                                       Instructions / How to play:
             
 
-            Thread.Sleep(20000);
+
+
+                                This Game is a Medivel RPG Fighter Game
+            
+                                You Will be Asked to Press Different Keys
+                              to Make Different Decisions Along your Journey 
+
+                                     Some Decisions Will Benifit You,
+                                            Others Will Not
+
+
+
+
+                                                                        
+            ");
+                                                                                            
+                                                                                                             
+            Thread.Sleep(200);
+            Console.ReadLine();
+            // Frame 3
+            Console.Clear();
+            Console.WriteLine("Hello, Welcome to Black X Tech!");
+            Console.WriteLine("\nAnimation Frame:");
+            Console.WriteLine("    -");
+            Thread.Sleep(200);
 
             // Frame 4
             Console.Clear();
