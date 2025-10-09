@@ -122,11 +122,11 @@ namespace studioTeam
 
             // Frame 5
             Console.Clear();
-            Console.WriteLine("        . --- .                                                  ");
-            Console.WriteLine("       /       \\                                                ");
-            Console.WriteLine("       | \\  /  |                                                ");
-            Console.WriteLine("       |       |                                                 ");
-            Console.WriteLine("       |   ^   |                                                 ");
+            Console.WriteLine("        . --- .                       ___                           ");
+            Console.WriteLine("       /       \\                    /           \\                 ");
+            Console.WriteLine("       | \\  /  |                   /             \\                ");
+            Console.WriteLine("       |       |                   |   _          |                ");
+            Console.WriteLine("       |   ^   |                   |  | |         |                 ");
             Console.WriteLine("        \\  _  /    /                                            ");
             Console.WriteLine("         -----    /                                              ");
             Console.WriteLine("          | |    /                                               ");
