@@ -31,13 +31,22 @@ namespace studioTeam
             Thread.Sleep(100);
             Console.Clear();
             Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]\r\n| _   _ ||  o  ||  _  |    |  |  |  | |  | |      ||  |  |    |  o  |    |  |  ||     ||  D  )(   \\_  /  [_ \r\n|  \\_/  ||     ||  |  |    |  |  |  | |  | |_|  |_||  _  |    |     |    |  _  ||  O  ||    /  \\__  ||    _]\r\n|   |   ||  _  ||  |  |    |  `  '  | |  |   |  |  |  |  |    |  _  |    |  |  ||     ||    \\  /  \\ ||   [_ \r\n|   |   ||  |  ||  |  |     \\      /  |  |   |  |  |  |  |    |  |  |    |  |  ||     ||  .  \\ \\    ||     |\r\n|___|___||__|__||__|__|      \\_/\\_/  |____|  |__|  |__|__|    |__|__|    |__|__| \\___/ |__|\\_|  \\___||_____|\r\n                                                                                                            ");
+<<<<<<< HEAD
+            Thread.Sleep(1000);
+=======
             Thread.Sleep(2000);
+>>>>>>> c4300353618dc9ec434495ba2267d0a83bfd5db3
 
 
 
             // Frame 2
             Console.Clear();
-            Console.WriteLine(@"                                       Instructions / How to play:
+            Console.WriteLine(@"             
+
+
+
+
+                                        Instructions / How to play:
             
 
 
@@ -47,7 +56,7 @@ namespace studioTeam
                                 You Will be Asked to Press Different Keys
                               to Make Different Decisions Along your Journey 
 
-                                     Some Decisions Will Benifit You,
+                                     Some Decisions Will Benefit You,
                                             Others Will Not
 
 
@@ -149,11 +158,37 @@ namespace studioTeam
             Console.WriteLine("");
             Console.WriteLine("Press any key to begin...");
 
+            Console.ReadLine();
 
 
 
 
+        }
+        public static int Moves(char key)
+        {
 
+            Random rand = new Random();
+            switch (key)
+            {
+                case 'U':
+                    {
+                        int uppercut = rand.Next(8);
+                        return uppercut;
+                    }
+                case 'R':
+                    {
+                        int roundhouse = rand.Next(12);
+                        return roundhouse;
+                    }
+
+                case 'S':
+                    {
+                        int swordSlash = rand.Next(20);
+                        return swordSlash;
+                    }
+
+
+            }
         }
     }
 }
