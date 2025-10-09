@@ -93,31 +93,53 @@ namespace studioTeam
             // Frame 4
             Console.Clear();
 
-            Console.WriteLine("      _____       ");
-            Console.WriteLine("     /     \\     ");
-            Console.WriteLine("    |  o o  |    ");
-            Console.WriteLine("    |   ^   |    ");
-            Console.WriteLine("    | \\___/ |    ");
-            Console.WriteLine("     \\_____/     ");
-            Console.WriteLine("      / | \\      ");
-            Console.WriteLine("     /  |  \\     ");
-            Console.WriteLine("    /   |   \\    ");
-            Console.WriteLine("       / \\      ");
-            Console.WriteLine("      /   \\     ");
-            Console.WriteLine("     /     \\    ");
-            Console.WriteLine("    /       \\   ");
-            Console.WriteLine("------------------");
             
+            Console.WriteLine("    *     *       *     *     *   *   *         *     *       *     *     *   *   *");
+            Console.WriteLine(" *       *     *       *     *      *    *     *       *     *     *   *   *");
+            Console.WriteLine("    *           *    *       *     *  *           *    *       *     * ");
+            Console.WriteLine();
 
-            Thread.Sleep(500);
+            
+            Console.WriteLine("       &&&                 _____                  &&&      ");
+            Console.WriteLine("      &&&&&               /     \\                &&&&&     ");
+            Console.WriteLine("     &&&&&&&             |  o o  |              &&&&&&&    ");
+            Console.WriteLine("    &&&&&&&&&            |   ^   |             &&&&&&&&&   ");
+            Console.WriteLine("      |||||              | \\___/ |               |||||     ");
+            Console.WriteLine("      |||||               \\_____/                |||||     ");
+            Console.WriteLine("      |||||                / | \\                 |||||     "); 
+            Console.WriteLine("      |||||               /  |  \\                |||||     ");
+            Console.WriteLine("                         /   |   \\                        ");
+            Console.WriteLine("                            / \\      ");
+            Console.WriteLine("                           /   \\     ");
+            Console.WriteLine("                          /     \\    ");
+            Console.WriteLine("                         /       \\   ");
+
+            
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+            Console.WriteLine();
+
+            Thread.Sleep(2000);
 
 
             // Frame 5
             Console.Clear();
-            Console.WriteLine("Hello, Welcome to Black X Tech!");
-            Console.WriteLine("\nAnimation Frame:");
-            Console.WriteLine("    |");
-            Thread.Sleep(200);
+            Console.WriteLine("        . --- .            ");
+            Console.WriteLine("       /       \\          ");
+            Console.WriteLine("       | \\  /  |          ");
+            Console.WriteLine("       |       |           ");
+            Console.WriteLine("       |   ^   |          ");
+            Console.WriteLine("        \\  _  /    /      ");
+            Console.WriteLine("         -----    /     ");
+            Console.WriteLine("          | |    /        ");
+            Console.WriteLine("         / | \\  /         ");
+            Console.WriteLine("        /  |  \\/          ");
+            Console.WriteLine("           |  /           ");
+            Console.WriteLine("          / \\            ");
+            Console.WriteLine("         /   \\           ");
+            Console.WriteLine("        /     \\          ");
+
+            Thread.Sleep(10000);
 
 
 
@@ -126,14 +148,42 @@ namespace studioTeam
             Random rand = new Random();
 
 
+            Console.Clear();
+            Console.WriteLine("WELCOME TO THE BATTLE TO DEATH!!!");
+            Console.WriteLine("");
+            Console.WriteLine("Press any key to begin...");
 
-           
+            Console.ReadLine();
 
 
 
 
+        }
+        public static int Moves(char key)
+        {
+
+            Random rand = new Random();
+            switch (key)
+            {
+                case 'U':
+                    {
+                        int uppercut = rand.Next(8);
+                        return uppercut;
+                    }
+                case 'R':
+                    {
+                        int roundhouse = rand.Next(12);
+                        return roundhouse;
+                    }
+
+                case 'S':
+                    {
+                        int swordSlash = rand.Next(20);
+                        return swordSlash;
+                    }
 
 
+            }
         }
     }
 }
