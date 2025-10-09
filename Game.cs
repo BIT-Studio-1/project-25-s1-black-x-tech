@@ -30,11 +30,10 @@ namespace studioTeam
             Console.Clear();
             Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]\r\n| _   _ ||  o  ||  _  |    |  |  |  | |  | |      ||  |  |    |  o  |    |  |  ||     ||  D  )(   \\_  /  [_ \r\n|  \\_/  ||     ||  |  |    |  |  |  | |  | |_|  |_||  _  |    |     |    |  _  ||  O  ||    /  \\__  ||    _]\r\n|   |   ||  _  ||  |  |    |  `  '  | |  |   |  |  |  |  |    |  _  |    |  |  ||     ||    \\  /  \\ ||   [_ \r\n|   |   ||  |  ||  |  |     \\      /  |  |   |  |  |  |  |    |  |  |    |  |  ||     ||  .  \\ \\    ||     |\r\n|___|___||__|__||__|__|      \\_/\\_/  |____|  |__|  |__|__|    |__|__|    |__|__| \\___/ |__|\\_|  \\___||_____|\r\n                                                                                                            ");
 
-<<<<<<< HEAD
-            Thread.Sleep(1000);
 
-=======
->>>>>>> b8846a1438563482981705b5b89cce164228796a
+      
+
+
             Thread.Sleep(2000);
 
 
@@ -129,12 +128,7 @@ namespace studioTeam
             Console.WriteLine("-----------------------------------------------------------------");
             Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
 
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> b8846a1438563482981705b5b89cce164228796a
             Thread.Sleep(2000);
 
 
@@ -153,7 +147,7 @@ namespace studioTeam
             //Below is an example ive written to show how to call the method function for the moves
             string keyInput;
             Console.WriteLine("Press U to uppercut, R to Roundhouse or S to Sword Slash");
-            keyInput = Console.ReadLine();
+            keyInput = Console.ReadLine().ToUpper();
             char newKey = Convert.ToChar(keyInput);
             Console.WriteLine($"You did {Moves(newKey)} Damage!");
            
