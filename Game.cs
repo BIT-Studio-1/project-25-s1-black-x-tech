@@ -139,8 +139,10 @@ namespace studioTeam
             Random rand = new Random();
 
 
-
-           
+            Console.Clear();
+            Console.WriteLine("WELCOME TO THE BATTLE TO DEATH!!!");
+            Console.WriteLine("");
+            Console.WriteLine("Press any key to begin...");
 
 
 
