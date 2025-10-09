@@ -84,28 +84,28 @@ namespace studioTeam
             // Frame 4
             Console.Clear();
 
-            // Simple starry sky (background)
+            
             Console.WriteLine("    *     *       *     *     *   *   *         *     *       *     *     *   *   *");
             Console.WriteLine(" *       *     *       *     *      *    *     *       *     *     *   *   *");
             Console.WriteLine("    *           *    *       *     *  *           *    *       *     * ");
             Console.WriteLine();
 
-            // Better tree on the left + man on the right
-            Console.WriteLine("       &&&                 _____                  &&& ");
-            Console.WriteLine("      &&&&&               /     \\               &&&&&");
-            Console.WriteLine("     &&&&&&&             |  o o  |              &&&&&&& ");
-            Console.WriteLine("    &&&&&&&&&            |   ^   |             &&&&&&&&&  ");
-            Console.WriteLine("      |||||              | \\___/ |              |||||   ");
-            Console.WriteLine("      |||||               \\_____/               |||||    ");
-            Console.WriteLine("      |||||                / | \\                |||||    "); 
-            Console.WriteLine("      |||||               /  |  \\               |||||");
-            Console.WriteLine("                         /   |   \\              ||||| ");
+            
+            Console.WriteLine("       &&&                 _____                  &&&      ");
+            Console.WriteLine("      &&&&&               /     \\                &&&&&     ");
+            Console.WriteLine("     &&&&&&&             |  o o  |              &&&&&&&    ");
+            Console.WriteLine("    &&&&&&&&&            |   ^   |             &&&&&&&&&   ");
+            Console.WriteLine("      |||||              | \\___/ |               |||||     ");
+            Console.WriteLine("      |||||               \\_____/                |||||     ");
+            Console.WriteLine("      |||||                / | \\                 |||||     "); 
+            Console.WriteLine("      |||||               /  |  \\                |||||     ");
+            Console.WriteLine("                         /   |   \\                        ");
             Console.WriteLine("                            / \\      ");
             Console.WriteLine("                           /   \\     ");
             Console.WriteLine("                          /     \\    ");
             Console.WriteLine("                         /       \\   ");
 
-            // Ground (grass)
+            
             Console.WriteLine("-----------------------------------------------------------------");
             Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
             Console.WriteLine();
