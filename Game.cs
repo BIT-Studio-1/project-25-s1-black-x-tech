@@ -83,25 +83,26 @@ namespace studioTeam
 
             Thread.Sleep(500);
 
-            
+
             // Frame 4
             Console.Clear();
-            Console.WriteLine("    _____             ");
-            Console.WriteLine("   /     \\           ");
-            Console.WriteLine("  |  o o  |          ");
-            Console.WriteLine("  |   ^   |          ");
-            Console.WriteLine("   \\ \\_/ /          ");
-            Console.WriteLine("    -----            ");
-            Console.WriteLine("     |||             ");
-            Console.WriteLine("    / | \\           ");
-            Console.WriteLine("   /  |  \\          ");
-            Console.WriteLine("      |              ");
-            Console.WriteLine("     / \\            ");
-            Console.WriteLine("    /   \\           ");
-            Console.WriteLine("   /     \\          ");
-           
+
+            Console.WriteLine("      _____       ");
+            Console.WriteLine("     /     \\     ");
+            Console.WriteLine("    |  o o  |    ");
+            Console.WriteLine("    |   ^   |    ");
+            Console.WriteLine("    | \\___/ |    ");
+            Console.WriteLine("     \\_____/     ");
+            Console.WriteLine("      / | \\      ");
+            Console.WriteLine("     /  |  \\     ");
+            Console.WriteLine("    /   |   \\    ");
+            Console.WriteLine("       / \\      ");
+            Console.WriteLine("      /   \\     ");
+            Console.WriteLine("     /     \\    ");
+            Console.WriteLine("    /       \\   ");
+
             Thread.Sleep(500);
-            
+
 
             // Frame 5
             Console.Clear();
