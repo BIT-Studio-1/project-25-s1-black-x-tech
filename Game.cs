@@ -106,6 +106,7 @@ namespace studioTeam
             Console.WriteLine("      /   \\     ");
             Console.WriteLine("     /     \\    ");
             Console.WriteLine("    /       \\   ");
+            Console.WriteLine("------------------");
             
 
             Thread.Sleep(500);
