@@ -100,8 +100,8 @@ namespace studioTeam
             Console.WriteLine("    /   \\           ");
             Console.WriteLine("   /     \\          ");
            
-            Thread.Sleep(9000);
-            Console.ReadLine();
+            Thread.Sleep(500);
+            
 
             // Frame 5
             Console.Clear();
