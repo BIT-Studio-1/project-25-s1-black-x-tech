@@ -35,7 +35,12 @@ namespace studioTeam
 
             // Frame 2
             Console.Clear();
-            Console.WriteLine(@"                                       Instructions / How to play:
+            Console.WriteLine(@"             
+
+
+
+
+                                        Instructions / How to play:
             
 
 
@@ -45,7 +50,7 @@ namespace studioTeam
                                 You Will be Asked to Press Different Keys
                               to Make Different Decisions Along your Journey 
 
-                                     Some Decisions Will Benifit You,
+                                     Some Decisions Will Benefit You,
                                             Others Will Not
 
 
@@ -53,7 +58,7 @@ namespace studioTeam
 
                                                                         
             ");
-            Thread.Sleep(2000);
+            Thread.Sleep(500);
             // Frame 3
             Console.Clear();
             Console.WriteLine(@"                                       
@@ -100,10 +105,27 @@ namespace studioTeam
 
             // Frame 5
             Console.Clear();
-            Console.WriteLine("Hello, Welcome to Black X Tech!");
-            Console.WriteLine("\nAnimation Frame:");
-            Console.WriteLine("    |");
-            Thread.Sleep(200);
+            Console.WriteLine("        . --- .                                                  ");
+            Console.WriteLine("       /       \\                                                ");
+            Console.WriteLine("       | \\  /  |                                                ");
+            Console.WriteLine("       |       |                                                 ");
+            Console.WriteLine("       |   ^   |                                                 ");
+            Console.WriteLine("        \\  _  /    /                                            ");
+            Console.WriteLine("         -----    /                                              ");
+            Console.WriteLine("          | |    /                                               ");
+            Console.WriteLine("         / | \\  /                                               ");
+            Console.WriteLine("        /  |  \\/                                                ");
+            Console.WriteLine("           |  /                                                  ");
+            Console.WriteLine("          / \\                                                   ");
+            Console.WriteLine("         /   \\                                                  ");
+            Console.WriteLine("        /     \\                                                 ");
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+
+
+
+
+            Thread.Sleep(500);
 
 
 
@@ -115,11 +137,37 @@ namespace studioTeam
 
            
 
+            Console.ReadLine();
 
 
 
 
+        }
+        public static int Moves(char key)
+        {
 
+            Random rand = new Random();
+            switch (key)
+            {
+                case 'U':
+                    {
+                        int uppercut = rand.Next(8);
+                        return uppercut;
+                    }
+                case 'R':
+                    {
+                        int roundhouse = rand.Next(12);
+                        return roundhouse;
+                    }
+
+                case 'S':
+                    {
+                        int swordSlash = rand.Next(20);
+                        return swordSlash;
+                    }
+
+
+            }
         }
     }
 }
