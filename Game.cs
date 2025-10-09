@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using System.Threading;
 
 namespace studioTeam
@@ -11,30 +12,26 @@ namespace studioTeam
 
 
 
-
-            Console.WriteLine();
-            Console.WriteLine("\nStarting animation...\n");
-
             // Frame 1
-            Console.Clear();
+           
             Console.Clear();
             Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]");
-            Thread.Sleep(200);
+            Thread.Sleep(100);
             Console.Clear();
             Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]\r\n| _   _ ||  o  ||  _  |    |  |  |  | |  | |      ||  |  |    |  o  |    |  |  ||     ||  D  )(   \\_  /  [_ \r\n|");
-            Thread.Sleep(200);
+            Thread.Sleep(100);
             Console.Clear();
             Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]\r\n| _   _ ||  o  ||  _  |    |  |  |  | |  | |      ||  |  |    |  o  |    |  |  ||     ||  D  )(   \\_  /  [_ \r\n|  \\_/  ||     ||  |  |    |  |  |  | |  | |_|  |_||  _  |    |     |    |  _  ||  O  ||    /  \\__  ||    _]\r\n");
-            Thread.Sleep(200);
+            Thread.Sleep(100);
             Console.Clear();
             Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]\r\n| _   _ ||  o  ||  _  |    |  |  |  | |  | |      ||  |  |    |  o  |    |  |  ||     ||  D  )(   \\_  /  [_ \r\n|  \\_/  ||     ||  |  |    |  |  |  | |  | |_|  |_||  _  |    |     |    |  _  ||  O  ||    /  \\__  ||    _]\r\n|   |   ||  _  ||  |  |    |  `  '  | |  |   |  |  |  |  |    |  _  |    |  |  ||     ||    \\  /  \\ ||                                                                                                            ");
-            Thread.Sleep(200);
+            Thread.Sleep(100);
             Console.Clear();
             Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]\r\n| _   _ ||  o  ||  _  |    |  |  |  | |  | |      ||  |  |    |  o  |    |  |  ||     ||  D  )(   \\_  /  [_ \r\n|  \\_/  ||     ||  |  |    |  |  |  | |  | |_|  |_||  _  |    |     |    |  _  ||  O  ||    /  \\__  ||    _]\r\n|   |   ||  _  ||  |  |    |  `  '  | |  |   |  |  |  |  |    |  _  |    |  |  ||     ||    \\  /  \\ ||   [_ \r\n|   |   ||  |  ||  |  |     \\      /  |  |   |  |  |  |  |    |  |  |    |  |  ||     ||  .  \\ \\    |");
-            Thread.Sleep(200);
+            Thread.Sleep(100);
             Console.Clear();
             Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]\r\n| _   _ ||  o  ||  _  |    |  |  |  | |  | |      ||  |  |    |  o  |    |  |  ||     ||  D  )(   \\_  /  [_ \r\n|  \\_/  ||     ||  |  |    |  |  |  | |  | |_|  |_||  _  |    |     |    |  _  ||  O  ||    /  \\__  ||    _]\r\n|   |   ||  _  ||  |  |    |  `  '  | |  |   |  |  |  |  |    |  _  |    |  |  ||     ||    \\  /  \\ ||   [_ \r\n|   |   ||  |  ||  |  |     \\      /  |  |   |  |  |  |  |    |  |  |    |  |  ||     ||  .  \\ \\    ||     |\r\n|___|___||__|__||__|__|      \\_/\\_/  |____|  |__|  |__|__|    |__|__|    |__|__| \\___/ |__|\\_|  \\___||_____|\r\n                                                                                                            ");
-            Thread.Sleep(200);
+            Thread.Sleep(2000);
 
 
 
@@ -83,25 +80,38 @@ namespace studioTeam
 
             Thread.Sleep(500);
 
-            
+
             // Frame 4
             Console.Clear();
-            Console.WriteLine("    _____             ");
-            Console.WriteLine("   /     \\           ");
-            Console.WriteLine("  |  o o  |          ");
-            Console.WriteLine("  |   ^   |          ");
-            Console.WriteLine("   \\ \\_/ /          ");
-            Console.WriteLine("    -----            ");
-            Console.WriteLine("     |||             ");
-            Console.WriteLine("    / | \\           ");
-            Console.WriteLine("   /  |  \\          ");
-            Console.WriteLine("      |              ");
-            Console.WriteLine("     / \\            ");
-            Console.WriteLine("    /   \\           ");
-            Console.WriteLine("   /     \\          ");
-           
-            Thread.Sleep(500);
-            
+
+            // Simple starry sky (background)
+            Console.WriteLine("    *     *       *     *     *   *   *         *     *       *     *     *   *   *");
+            Console.WriteLine(" *       *     *       *     *      *    *     *       *     *     *   *   *");
+            Console.WriteLine("    *           *    *       *     *  *           *    *       *     * ");
+            Console.WriteLine();
+
+            // Better tree on the left + man on the right
+            Console.WriteLine("       &&&                 _____                  &&& ");
+            Console.WriteLine("      &&&&&               /     \\               &&&&&");
+            Console.WriteLine("     &&&&&&&             |  o o  |              &&&&&&& ");
+            Console.WriteLine("    &&&&&&&&&            |   ^   |             &&&&&&&&&  ");
+            Console.WriteLine("      |||||              | \\___/ |              |||||   ");
+            Console.WriteLine("      |||||               \\_____/               |||||    ");
+            Console.WriteLine("      |||||                / | \\                |||||    "); 
+            Console.WriteLine("      |||||               /  |  \\               |||||");
+            Console.WriteLine("                         /   |   \\              ||||| ");
+            Console.WriteLine("                            / \\      ");
+            Console.WriteLine("                           /   \\     ");
+            Console.WriteLine("                          /     \\    ");
+            Console.WriteLine("                         /       \\   ");
+
+            // Ground (grass)
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+            Console.WriteLine();
+
+            Thread.Sleep(2000);
+
 
             // Frame 5
             Console.Clear();
@@ -122,100 +132,18 @@ namespace studioTeam
 
             Thread.Sleep(10000);
 
-            // Frame 6
-            Console.Clear();
-            Console.WriteLine("Hello, Welcome to Black X Tech!");
-            Console.WriteLine("\nAnimation Frame:");
-            Console.WriteLine("    /");
-            Thread.Sleep(200);
 
-            // Frame 7
-            Console.Clear();
-            Console.WriteLine("Hello, Welcome to Black X Tech!");
-            Console.WriteLine("\nAnimation Frame:");
-            Console.WriteLine("    -");
-            Thread.Sleep(200);
 
-            // Frame 8
-            Console.Clear();
-            Console.WriteLine("Hello, Welcome to Black X Tech!");
-            Console.WriteLine("\nAnimation Frame:");
-            Console.WriteLine("    \\");
-            Thread.Sleep(200);
+            int ComputerHealth = 100, PlayerHealth =100;
 
-            Console.Clear();
-            Console.WriteLine("Hello, Welcome to Black X Tech!");
-            Console.WriteLine("\nAnimation complete!");
+            Random rand = new Random();
 
 
 
-            Console.WriteLine("That was the simplest way of writing code for animation above");
-            Console.WriteLine("Now, let's do the same animation using loops for better efficiency.");
-            Console.WriteLine("Press any key to continue...");
-            Console.ReadKey();
-
-            Console.Clear();
-
-
-            //The same animation using loops for better efficiency
-            //this is more efficient and easier to maintain
-
-            // ASCII Animation - Spinning Wheel (8 frames)
-            string[] frames = {
-                "|",
-                "/",
-                "-",
-                "\\",
-                "|",
-                "/",
-                "-",
-                "\\"
-            };
-
-            Console.WriteLine("\nStarting animation number 2...\n");
-
-            // Run animation for 5 complete cycles
-            for (int cycle = 0; cycle < 5; cycle++)
-            {
-                for (int i = 0; i < frames.Length; i++)
-                {
-                    Console.Clear();
-                    Console.WriteLine("Hello, Welcome to Black X Tech!");
-                    Console.WriteLine("\nAnimation Frame:");
-                    Console.WriteLine("    " + frames[i]);
-
-                    Thread.Sleep(200); // 200ms delay between frames
-                }
-            }
-
-            Console.Clear();
-            Console.WriteLine("Hello, Welcome to Black X Tech!");
-            Console.WriteLine("\nAnimation complete!");
-
-            Console.ReadLine();
-
-
-            // End of the program
-
-            // Now have a turn at creating your own animation and push it upto this file underneath this comment.
-            
-
-            // Cade's Animation
+           
 
 
 
-
-            //Erica's Animation
-
-
-
-
-            //Hector's Animation
-
-
-
-
-            //Himanshu's Animation
 
 
 
