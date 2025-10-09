@@ -31,11 +31,11 @@ namespace studioTeam
             Thread.Sleep(100);
             Console.Clear();
             Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]\r\n| _   _ ||  o  ||  _  |    |  |  |  | |  | |      ||  |  |    |  o  |    |  |  ||     ||  D  )(   \\_  /  [_ \r\n|  \\_/  ||     ||  |  |    |  |  |  | |  | |_|  |_||  _  |    |     |    |  _  ||  O  ||    /  \\__  ||    _]\r\n|   |   ||  _  ||  |  |    |  `  '  | |  |   |  |  |  |  |    |  _  |    |  |  ||     ||    \\  /  \\ ||   [_ \r\n|   |   ||  |  ||  |  |     \\      /  |  |   |  |  |  |  |    |  |  |    |  |  ||     ||  .  \\ \\    ||     |\r\n|___|___||__|__||__|__|      \\_/\\_/  |____|  |__|  |__|__|    |__|__|    |__|__| \\___/ |__|\\_|  \\___||_____|\r\n                                                                                                            ");
-<<<<<<< HEAD
+
             Thread.Sleep(1000);
-=======
+
             Thread.Sleep(2000);
->>>>>>> c4300353618dc9ec434495ba2267d0a83bfd5db3
+
 
 
 
@@ -139,7 +139,7 @@ namespace studioTeam
             Console.WriteLine("         /   \\           ");
             Console.WriteLine("        /     \\          ");
 
-            Thread.Sleep(10000);
+            Thread.Sleep(2000);
 
 
 
@@ -156,34 +156,38 @@ namespace studioTeam
             Console.ReadLine();
 
 
-
-
+            //Below is an example ive written to show how to call the method function for the moves
+            string keyInput;
+            Console.WriteLine("Press U to uppercut, R to Roundhouse or S to Sword Slash");
+            keyInput = Console.ReadLine();
+            char newKey = Convert.ToChar(keyInput);
+            Console.WriteLine($"You did {Moves(newKey)} Damage!");
+           
+            Thread.Sleep(2000);
         }
         public static int Moves(char key)
         {
+            int damage = 0;
 
             Random rand = new Random();
             switch (key)
             {
                 case 'U':
-                    {
-                        int uppercut = rand.Next(8);
-                        return uppercut;
-                    }
+                        damage = rand.Next(9);
+                        break;
                 case 'R':
-                    {
-                        int roundhouse = rand.Next(12);
-                        return roundhouse;
-                    }
-
+                        damage = rand.Next(13);
+                        break;
                 case 'S':
-                    {
-                        int swordSlash = rand.Next(20);
-                        return swordSlash;
-                    }
-
-
+                    
+                        damage = rand.Next(21);
+                        break;
+                default:
+                        damage = 0;
+                        break;
+                    
             }
+            return damage;
         }
     }
 }
