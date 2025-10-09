@@ -34,13 +34,18 @@ namespace studioTeam
             Thread.Sleep(200);
             Console.Clear();
             Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]\r\n| _   _ ||  o  ||  _  |    |  |  |  | |  | |      ||  |  |    |  o  |    |  |  ||     ||  D  )(   \\_  /  [_ \r\n|  \\_/  ||     ||  |  |    |  |  |  | |  | |_|  |_||  _  |    |     |    |  _  ||  O  ||    /  \\__  ||    _]\r\n|   |   ||  _  ||  |  |    |  `  '  | |  |   |  |  |  |  |    |  _  |    |  |  ||     ||    \\  /  \\ ||   [_ \r\n|   |   ||  |  ||  |  |     \\      /  |  |   |  |  |  |  |    |  |  |    |  |  ||     ||  .  \\ \\    ||     |\r\n|___|___||__|__||__|__|      \\_/\\_/  |____|  |__|  |__|__|    |__|__|    |__|__| \\___/ |__|\\_|  \\___||_____|\r\n                                                                                                            ");
-            Thread.Sleep(200);
+            Thread.Sleep(1000);
 
 
 
             // Frame 2
             Console.Clear();
-            Console.WriteLine(@"                                       Instructions / How to play:
+            Console.WriteLine(@"             
+
+
+
+
+                                        Instructions / How to play:
             
 
 
@@ -50,7 +55,7 @@ namespace studioTeam
                                 You Will be Asked to Press Different Keys
                               to Make Different Decisions Along your Journey 
 
-                                     Some Decisions Will Benifit You,
+                                     Some Decisions Will Benefit You,
                                             Others Will Not
 
 
