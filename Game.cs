@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Globalization;
 using System.Threading;
 
 namespace studioTeam
@@ -13,7 +12,6 @@ namespace studioTeam
 
 
             // Frame 1
-           
             Console.Clear();
             Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]");
             Thread.Sleep(100);
@@ -80,57 +78,32 @@ namespace studioTeam
 
             Thread.Sleep(500);
 
-
+            
             // Frame 4
             Console.Clear();
-
+            Console.WriteLine("    _____             ");
+            Console.WriteLine("   /     \\           ");
+            Console.WriteLine("  |  o o  |          ");
+            Console.WriteLine("  |   ^   |          ");
+            Console.WriteLine("   \\ \\_/ /          ");
+            Console.WriteLine("    -----            ");
+            Console.WriteLine("     |||             ");
+            Console.WriteLine("    / | \\           ");
+            Console.WriteLine("   /  |  \\          ");
+            Console.WriteLine("      |              ");
+            Console.WriteLine("     / \\            ");
+            Console.WriteLine("    /   \\           ");
+            Console.WriteLine("   /     \\          ");
+           
+            Thread.Sleep(500);
             
-            Console.WriteLine("    *     *       *     *     *   *   *         *     *       *     *     *   *   *");
-            Console.WriteLine(" *       *     *       *     *      *    *     *       *     *     *   *   *");
-            Console.WriteLine("    *           *    *       *     *  *           *    *       *     * ");
-            Console.WriteLine();
-
-            
-            Console.WriteLine("       &&&                 _____                  &&&      ");
-            Console.WriteLine("      &&&&&               /     \\                &&&&&     ");
-            Console.WriteLine("     &&&&&&&             |  o o  |              &&&&&&&    ");
-            Console.WriteLine("    &&&&&&&&&            |   ^   |             &&&&&&&&&   ");
-            Console.WriteLine("      |||||              | \\___/ |               |||||     ");
-            Console.WriteLine("      |||||               \\_____/                |||||     ");
-            Console.WriteLine("      |||||                / | \\                 |||||     "); 
-            Console.WriteLine("      |||||               /  |  \\                |||||     ");
-            Console.WriteLine("                         /   |   \\                        ");
-            Console.WriteLine("                            / \\      ");
-            Console.WriteLine("                           /   \\     ");
-            Console.WriteLine("                          /     \\    ");
-            Console.WriteLine("                         /       \\   ");
-
-            
-            Console.WriteLine("-----------------------------------------------------------------");
-            Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-            Console.WriteLine();
-
-            Thread.Sleep(2000);
-
 
             // Frame 5
             Console.Clear();
-            Console.WriteLine("        . --- .            ");
-            Console.WriteLine("       /       \\          ");
-            Console.WriteLine("       | \\  /  |          ");
-            Console.WriteLine("       |       |           ");
-            Console.WriteLine("       |   ^   |          ");
-            Console.WriteLine("        \\  _  /    /      ");
-            Console.WriteLine("         -----    /     ");
-            Console.WriteLine("          | |    /        ");
-            Console.WriteLine("         / | \\  /         ");
-            Console.WriteLine("        /  |  \\/          ");
-            Console.WriteLine("           |  /           ");
-            Console.WriteLine("          / \\            ");
-            Console.WriteLine("         /   \\           ");
-            Console.WriteLine("        /     \\          ");
-
-            Thread.Sleep(10000);
+            Console.WriteLine("Hello, Welcome to Black X Tech!");
+            Console.WriteLine("\nAnimation Frame:");
+            Console.WriteLine("    |");
+            Thread.Sleep(200);
 
 
 
@@ -139,10 +112,8 @@ namespace studioTeam
             Random rand = new Random();
 
 
-            Console.Clear();
-            Console.WriteLine("WELCOME TO THE BATTLE TO DEATH!!!");
-            Console.WriteLine("");
-            Console.WriteLine("Press any key to begin...");
+
+           
 
 
 
