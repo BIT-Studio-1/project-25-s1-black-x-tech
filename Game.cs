@@ -31,9 +31,12 @@ namespace studioTeam
             Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]\r\n| _   _ ||  o  ||  _  |    |  |  |  | |  | |      ||  |  |    |  o  |    |  |  ||     ||  D  )(   \\_  /  [_ \r\n|  \\_/  ||     ||  |  |    |  |  |  | |  | |_|  |_||  _  |    |     |    |  _  ||  O  ||    /  \\__  ||    _]\r\n|   |   ||  _  ||  |  |    |  `  '  | |  |   |  |  |  |  |    |  _  |    |  |  ||     ||    \\  /  \\ ||   [_ \r\n|   |   ||  |  ||  |  |     \\      /  |  |   |  |  |  |  |    |  |  |    |  |  ||     ||  .  \\ \\    ||     |\r\n|___|___||__|__||__|__|      \\_/\\_/  |____|  |__|  |__|__|    |__|__|    |__|__| \\___/ |__|\\_|  \\___||_____|\r\n                                                                                                            ");
 
 
+<<<<<<< HEAD
       
 
 
+=======
+>>>>>>> b17ca4ba9d0bd6e4d24a9a8e67ac240e0d0e08d4
             Thread.Sleep(2000);
 
 
@@ -107,21 +110,21 @@ namespace studioTeam
             Console.WriteLine("   /     \\          ");
            
             Thread.Sleep(500);
-            
+
 
             // Frame 5
             Console.Clear();
-            Console.WriteLine("        . --- .                                                  ");
-            Console.WriteLine("       /       \\                                                ");
-            Console.WriteLine("       | \\  /  |                                                ");
-            Console.WriteLine("       |       |                                                 ");
-            Console.WriteLine("       |   ^   |                                                 ");
-            Console.WriteLine("        \\  _  /    /                                            ");
-            Console.WriteLine("         -----    /                                              ");
-            Console.WriteLine("          | |    /                                               ");
-            Console.WriteLine("         / | \\  /                                               ");
-            Console.WriteLine("        /  |  \\/                                                ");
-            Console.WriteLine("           |  /                                                  ");
+            Console.WriteLine("        . --- .                       ___________                   ");
+            Console.WriteLine("       /       \\                    /            \\                 ");
+            Console.WriteLine("       | \\  /  |                   /______________\\                ");
+            Console.WriteLine("       |       |                   |   _    |_|   |                ");
+            Console.WriteLine("       |   ^   |                   |__|_|_________|                 ");
+            Console.WriteLine("        \\  _  /    /                  | |                          ");
+            Console.WriteLine("         -----    /                  /   /                        ");
+            Console.WriteLine("          | |    /                 /      /                        ");
+            Console.WriteLine("         / | \\  /                /         /                      ");
+            Console.WriteLine("        /  |  \\/                /          /                        ");
+            Console.WriteLine("___________|__/________________/           /______________________");
             Console.WriteLine("          / \\                                                   ");
             Console.WriteLine("         /   \\                                                  ");
             Console.WriteLine("        /     \\                                                 ");
@@ -129,6 +132,11 @@ namespace studioTeam
             Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> b17ca4ba9d0bd6e4d24a9a8e67ac240e0d0e08d4
             Thread.Sleep(2000);
 
 
