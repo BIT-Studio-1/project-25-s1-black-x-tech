@@ -142,7 +142,7 @@ namespace studioTeam
 
 
 
-            Thread.Sleep(500);
+            Thread.Sleep(2000);
 
 
 
