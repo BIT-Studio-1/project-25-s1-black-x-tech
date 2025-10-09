@@ -144,7 +144,7 @@ namespace studioTeam
             Console.WriteLine("");
             Console.WriteLine("Press any key to begin...");
 
-
+            Console.ReadLine();
 
 
 
