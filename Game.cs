@@ -110,6 +110,13 @@ namespace studioTeam
             Console.WriteLine("    |");
             Thread.Sleep(200);
 
+
+
+            int ComputerHealth = 100, PlayerHealth =100;
+
+            Random rand = new Random();
+
+           
             // Frame 6
             Console.Clear();
             Console.WriteLine("Hello, Welcome to Black X Tech!");
