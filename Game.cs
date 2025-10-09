@@ -84,31 +84,53 @@ namespace studioTeam
             // Frame 4
             Console.Clear();
 
-            Console.WriteLine("      _____       ");
-            Console.WriteLine("     /     \\     ");
-            Console.WriteLine("    |  o o  |    ");
-            Console.WriteLine("    |   ^   |    ");
-            Console.WriteLine("    | \\___/ |    ");
-            Console.WriteLine("     \\_____/     ");
-            Console.WriteLine("      / | \\      ");
-            Console.WriteLine("     /  |  \\     ");
-            Console.WriteLine("    /   |   \\    ");
-            Console.WriteLine("       / \\      ");
-            Console.WriteLine("      /   \\     ");
-            Console.WriteLine("     /     \\    ");
-            Console.WriteLine("    /       \\   ");
-            Console.WriteLine("------------------");
-            
+            // Simple starry sky (background)
+            Console.WriteLine("    *     *       *     *     *   *   *         *     *       *     *     *   *   *");
+            Console.WriteLine(" *       *     *       *     *      *    *     *       *     *     *   *   *");
+            Console.WriteLine("    *           *    *       *     *  *           *    *       *     * ");
+            Console.WriteLine();
 
-            Thread.Sleep(500);
+            // Better tree on the left + man on the right
+            Console.WriteLine("       &&&                 _____                  &&& ");
+            Console.WriteLine("      &&&&&               /     \\               &&&&&");
+            Console.WriteLine("     &&&&&&&             |  o o  |              &&&&&&& ");
+            Console.WriteLine("    &&&&&&&&&            |   ^   |             &&&&&&&&&  ");
+            Console.WriteLine("      |||||              | \\___/ |              |||||   ");
+            Console.WriteLine("      |||||               \\_____/               |||||    ");
+            Console.WriteLine("      |||||                / | \\                |||||    "); 
+            Console.WriteLine("      |||||               /  |  \\               |||||");
+            Console.WriteLine("                         /   |   \\              ||||| ");
+            Console.WriteLine("                            / \\      ");
+            Console.WriteLine("                           /   \\     ");
+            Console.WriteLine("                          /     \\    ");
+            Console.WriteLine("                         /       \\   ");
+
+            // Ground (grass)
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+            Console.WriteLine();
+
+            Thread.Sleep(2000);
 
 
             // Frame 5
             Console.Clear();
-            Console.WriteLine("Hello, Welcome to Black X Tech!");
-            Console.WriteLine("\nAnimation Frame:");
-            Console.WriteLine("    |");
-            Thread.Sleep(200);
+            Console.WriteLine("        . --- .            ");
+            Console.WriteLine("       /       \\          ");
+            Console.WriteLine("       | \\  /  |          ");
+            Console.WriteLine("       |       |           ");
+            Console.WriteLine("       |   ^   |          ");
+            Console.WriteLine("        \\  _  /    /      ");
+            Console.WriteLine("         -----    /     ");
+            Console.WriteLine("          | |    /        ");
+            Console.WriteLine("         / | \\  /         ");
+            Console.WriteLine("        /  |  \\/          ");
+            Console.WriteLine("           |  /           ");
+            Console.WriteLine("          / \\            ");
+            Console.WriteLine("         /   \\           ");
+            Console.WriteLine("        /     \\          ");
+
+            Thread.Sleep(10000);
 
 
 
