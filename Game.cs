@@ -31,6 +31,9 @@ namespace studioTeam
             Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]\r\n| _   _ ||  o  ||  _  |    |  |  |  | |  | |      ||  |  |    |  o  |    |  |  ||     ||  D  )(   \\_  /  [_ \r\n|  \\_/  ||     ||  |  |    |  |  |  | |  | |_|  |_||  _  |    |     |    |  _  ||  O  ||    /  \\__  ||    _]\r\n|   |   ||  _  ||  |  |    |  `  '  | |  |   |  |  |  |  |    |  _  |    |  |  ||     ||    \\  /  \\ ||   [_ \r\n|   |   ||  |  ||  |  |     \\      /  |  |   |  |  |  |  |    |  |  |    |  |  ||     ||  .  \\ \\    ||     |\r\n|___|___||__|__||__|__|      \\_/\\_/  |____|  |__|  |__|__|    |__|__|    |__|__| \\___/ |__|\\_|  \\___||_____|\r\n                                                                                                            ");
 
 
+      
+
+
             Thread.Sleep(2000);
 
 
@@ -56,7 +59,7 @@ namespace studioTeam
                                      Some Decisions Will Benefit You,
                                             Others Will Not
 
-
+            
 
 
                                                                         
@@ -82,28 +85,37 @@ namespace studioTeam
                         _|_____|_____|__  __|____|_____|_
                        |________________||________________|
 ");
-            
-
             Thread.Sleep(1500);
-
-            
-            // Frame 4
             Console.Clear();
-            Console.WriteLine("    _____             ");
-            Console.WriteLine("   /     \\           ");
-            Console.WriteLine("  |  o o  |          ");
-            Console.WriteLine("  |   ^   |          ");
-            Console.WriteLine("   \\ \\_/ /          ");
-            Console.WriteLine("    -----            ");
-            Console.WriteLine("     |||             ");
-            Console.WriteLine("    / | \\           ");
-            Console.WriteLine("   /  |  \\          ");
-            Console.WriteLine("      |              ");
-            Console.WriteLine("     / \\            ");
-            Console.WriteLine("    /   \\           ");
-            Console.WriteLine("   /     \\          ");
-           
-            Thread.Sleep(1500);
+
+            Console.WriteLine("    *     *       *     *     *   *   *         *     *       *     *     *   *   *");
+            Console.WriteLine(" *       *     *       *     *      *    *     *       *     *     *   *   *");
+            Console.WriteLine("    *           *    *       *     *  *           *    *       *     * ");
+            Console.WriteLine();
+
+            
+            Console.WriteLine("       &&&                 _____                  &&& ");
+            Console.WriteLine("      &&&&&               /     \\                &&&&&");
+            Console.WriteLine("     &&&&&&&             |  o o  |              &&&&&&& ");
+            Console.WriteLine("    &&&&&&&&&            |   ^   |             &&&&&&&&&  ");
+            Console.WriteLine("      |||||              | \\___/ |              |||||   ");
+            Console.WriteLine("      |||||               \\_____/               |||||    ");
+            Console.WriteLine("      |||||                / | \\                |||||    ");
+            Console.WriteLine("      |||||               /  |  \\               |||||");
+            Console.WriteLine("                         /   |   \\              ||||| ");
+            Console.WriteLine("                            / \\      ");
+            Console.WriteLine("                           /   \\     ");
+            Console.WriteLine("                          /     \\    ");
+            Console.WriteLine("                         /       \\   ");
+
+            // Ground (grass)
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+            Console.WriteLine();
+
+
+            Thread.Sleep(500);
+            
 
 
             // Frame 5
