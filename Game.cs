@@ -388,5 +388,107 @@ namespace studioTeam
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
             Thread.Sleep(1500);
         }
+
+        public static void computerHitsPlayer()
+        {
+
+            Console.Clear();
+            Console.WriteLine("        . --- .                                                                                _____       ");
+            Console.WriteLine("       /       \\                                                                              /     \\      ");
+            Console.WriteLine("       | \\  /  |                                                                             |  o o  |       ");
+            Console.WriteLine("       |       |                                                                             |   ^   |       ");
+            Console.WriteLine("       |   ^   |                                                                              \\ \\_/ /      ");
+            Console.WriteLine("        \\  _  /    /                                                                           -----         ");
+            Console.WriteLine("         -----    /                                                                             |||       ");
+            Console.WriteLine("          | |    /                                                                             / | \\        ");
+            Console.WriteLine("         / | \\  /                                                                             /  |  \\          ");
+            Console.WriteLine("        /  |  \\/                                                                                 |        ");
+            Console.WriteLine("           |  /                                                                                 / \\   ");
+            Console.WriteLine("          / \\                                                                                  /   \\   ");
+            Console.WriteLine("         /   \\                                                                                /     \\   ");
+            Console.WriteLine("        /     \\                                                                              /       \\    ");
+            Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
+            Thread.Sleep(1500);
+
+
+            Console.Clear();
+            Console.WriteLine("             . --- .                                                                             _____       ");
+            Console.WriteLine("            /       \\                                                                           /     \\      ");
+            Console.WriteLine("            | \\  /  |                                                                          |  o o  |       ");
+            Console.WriteLine("            |       |                                                                          |   ^   |       ");
+            Console.WriteLine("            |   ^   |                                                                           \\ \\_/ /      ");
+            Console.WriteLine("             \\  _  /    /                                                                        -----         ");
+            Console.WriteLine("              -----    /                                                                          |||       ");
+            Console.WriteLine("               | |    /                                                                          / | \\        ");
+            Console.WriteLine("              / | \\  /                                                                          /  |  \\          ");
+            Console.WriteLine("             /  |  \\/                                                                              |        ");
+            Console.WriteLine("                |  /                                                                              / \\   ");
+            Console.WriteLine("               / \\                                                                               /   \\   ");
+            Console.WriteLine("              /   \\                                                                             /     \\   ");
+            Console.WriteLine("             /     \\                                                                           /       \\    ");
+            Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
+            Thread.Sleep(1500);
+
+
+            Console.Clear();
+            Console.WriteLine("                      . --- .                                                                    _____       ");
+            Console.WriteLine("                     /       \\                                                                  /     \\      ");
+            Console.WriteLine("                     | \\  /  |                                                                 |  o o  |       ");
+            Console.WriteLine("                     |       |                                                                 |   ^   |       ");
+            Console.WriteLine("                     |   ^   |                                                                  \\ \\_/ /      ");
+            Console.WriteLine("                      \\  _  /    /                                                               -----         ");
+            Console.WriteLine("                       -----    /                                                                 |||       ");
+            Console.WriteLine("                        | |    /                                                                 / | \\        ");
+            Console.WriteLine("                       / | \\  /                                                                 /  |  \\          ");
+            Console.WriteLine("                      /  |  \\/                                                                     |        ");
+            Console.WriteLine("                         |  /                                                                     / \\   ");
+            Console.WriteLine("                        / \\                                                                      /   \\   ");
+            Console.WriteLine("                       /   \\                                                                    /     \\   ");
+            Console.WriteLine("                      /     \\                                                                  /       \\    ");
+            Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
+            Thread.Sleep(1500);
+
+
+            Console.Clear();
+            Console.WriteLine("                                 . --- .                                                         _____       ");
+            Console.WriteLine("                                /       \\                                                       /     \\      ");
+            Console.WriteLine("                                | \\  /  |                                                      |  o o  |       ");
+            Console.WriteLine("                                |       |                                                      |   ^   |       ");
+            Console.WriteLine("                                |   ^   |                                                       \\ \\_/ /      ");
+            Console.WriteLine("                                 \\  _  /    /                                                    -----         ");
+            Console.WriteLine("                                  -----    /                                                      |||       ");
+            Console.WriteLine("                                   | |    /                                                      / | \\        ");
+            Console.WriteLine("                                  / | \\  /                                                      /  |  \\          ");
+            Console.WriteLine("                                 /  |  \\/                                                          |        ");
+            Console.WriteLine("                                    |  /                                                          / \\   ");
+            Console.WriteLine("                                   / \\                                                           /   \\   ");
+            Console.WriteLine("                                  /   \\                                                         /     \\   ");
+            Console.WriteLine("                                 /     \\                                                       /       \\    ");
+            Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
+            Thread.Sleep(1500);
+
+
+            Console.Clear();
+            Console.WriteLine("                                 . --- .           _____       ");
+            Console.WriteLine("                                /       \\         /     \\      ");
+            Console.WriteLine("                                | \\  /  |        |  o o  |       ");
+            Console.WriteLine("                                |       |        |   ^   |       ");
+            Console.WriteLine("                                |   ^   |         \\ \\_/ /      ");
+            Console.WriteLine("                                 \\  _  /    /      -----         ");
+            Console.WriteLine("                                  -----    /        |||       ");
+            Console.WriteLine("                                   | |    /        / | \\        ");
+            Console.WriteLine("                                  / | \\  /        /  |  \\          ");
+            Console.WriteLine("                                 /  |  \\/            |        ");
+            Console.WriteLine("                                    |  /            / \\   ");
+            Console.WriteLine("                                   / \\             /   \\   ");
+            Console.WriteLine("                                  /   \\           /     \\   ");
+            Console.WriteLine("                                 /     \\         /       \\    ");
+            Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
+            Thread.Sleep(1500);
+
+
+
+
+        }
     }
 }
