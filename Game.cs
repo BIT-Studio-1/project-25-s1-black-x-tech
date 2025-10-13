@@ -31,12 +31,7 @@ namespace studioTeam
             Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]\r\n| _   _ ||  o  ||  _  |    |  |  |  | |  | |      ||  |  |    |  o  |    |  |  ||     ||  D  )(   \\_  /  [_ \r\n|  \\_/  ||     ||  |  |    |  |  |  | |  | |_|  |_||  _  |    |     |    |  _  ||  O  ||    /  \\__  ||    _]\r\n|   |   ||  _  ||  |  |    |  `  '  | |  |   |  |  |  |  |    |  _  |    |  |  ||     ||    \\  /  \\ ||   [_ \r\n|   |   ||  |  ||  |  |     \\      /  |  |   |  |  |  |  |    |  |  |    |  |  ||     ||  .  \\ \\    ||     |\r\n|___|___||__|__||__|__|      \\_/\\_/  |____|  |__|  |__|__|    |__|__|    |__|__| \\___/ |__|\\_|  \\___||_____|\r\n                                                                                                            ");
 
 
-<<<<<<< HEAD
-      
-
-
-=======
->>>>>>> b17ca4ba9d0bd6e4d24a9a8e67ac240e0d0e08d4
+ 
             Thread.Sleep(2000);
 
 
@@ -92,23 +87,35 @@ namespace studioTeam
 
             Thread.Sleep(500);
 
-            
+
             // Frame 4
             Console.Clear();
-            Console.WriteLine("    _____             ");
-            Console.WriteLine("   /     \\           ");
-            Console.WriteLine("  |  o o  |          ");
-            Console.WriteLine("  |   ^   |          ");
-            Console.WriteLine("   \\ \\_/ /          ");
-            Console.WriteLine("    -----            ");
-            Console.WriteLine("     |||             ");
-            Console.WriteLine("    / | \\           ");
-            Console.WriteLine("   /  |  \\          ");
-            Console.WriteLine("      |              ");
-            Console.WriteLine("     / \\            ");
-            Console.WriteLine("    /   \\           ");
-            Console.WriteLine("   /     \\          ");
-           
+            Console.WriteLine("    *     *       *     *     *   *   *         *     *       *     *     *   *   *");
+            Console.WriteLine(" *       *     *       *     *      *    *     *       *     *     *   *   *");
+            Console.WriteLine("    *           *    *       *     *  *           *    *       *     * ");
+            Console.WriteLine();
+
+            
+            Console.WriteLine("       &&&                 _____                  &&& ");
+            Console.WriteLine("      &&&&&               /     \\                &&&&&");
+            Console.WriteLine("     &&&&&&&             |  o o  |              &&&&&&& ");
+            Console.WriteLine("    &&&&&&&&&            |   ^   |             &&&&&&&&&  ");
+            Console.WriteLine("      |||||              | \\___/ |              |||||   ");
+            Console.WriteLine("      |||||               \\_____/               |||||    ");
+            Console.WriteLine("      |||||                / | \\                |||||    ");
+            Console.WriteLine("      |||||               /  |  \\               |||||");
+            Console.WriteLine("                         /   |   \\              ||||| ");
+            Console.WriteLine("                            / \\      ");
+            Console.WriteLine("                           /   \\     ");
+            Console.WriteLine("                          /     \\    ");
+            Console.WriteLine("                         /       \\   ");
+
+            // Ground (grass)
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+            Console.WriteLine();
+
+
             Thread.Sleep(500);
 
 
@@ -132,11 +139,7 @@ namespace studioTeam
             Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
 
 
-<<<<<<< HEAD
-=======
 
-
->>>>>>> b17ca4ba9d0bd6e4d24a9a8e67ac240e0d0e08d4
             Thread.Sleep(2000);
 
 
