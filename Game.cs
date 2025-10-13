@@ -9,7 +9,8 @@ namespace studioTeam
         {
             Console.WriteLine("Hello, Welcome to Black X Tech!");
 
-
+            playerHitsComputer();
+            Console.ReadLine();
 
             // Frame 1
             Console.Clear();
@@ -196,6 +197,28 @@ namespace studioTeam
                     
             }
             return damage;
+        }
+
+
+        public static void playerHitsComputer()
+        {
+            Console.Clear();
+            Console.WriteLine("        . --- .                                                                                _____       ");
+            Console.WriteLine("       /       \\                                                                              /     \\      ");
+            Console.WriteLine("       | \\  /  |                                                                             |  o o  |       ");
+            Console.WriteLine("       |       |                                                                             |   ^   |       ");
+            Console.WriteLine("       |   ^   |                                                                              \\ \\_/ /      ");
+            Console.WriteLine("        \\  _  /    /                                                                           -----         ");
+            Console.WriteLine("         -----    /                                                                             |||       ");
+            Console.WriteLine("          | |    /                                                                             / | \\        ");
+            Console.WriteLine("         / | \\  /                                                                             /  |  \\          ");
+            Console.WriteLine("        /  |  \\/                                                                                 |        ");
+            Console.WriteLine("           |  /                                                                                 / \\   ");
+            Console.WriteLine("          / \\                                                                                  /   \\   ");
+            Console.WriteLine("         /   \\                                                                                /     \\   ");
+            Console.WriteLine("        /     \\                                                                              /       \\    ");
+
+            Thread.Sleep(1500);
         }
     }
 }
