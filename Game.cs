@@ -305,6 +305,26 @@ namespace studioTeam
             Console.WriteLine("                                 /     \\         /       \\    ");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
             Thread.Sleep(1500);
+
+
+
+            Console.Clear();
+            Console.WriteLine("                                 . --- .                  ");
+            Console.WriteLine("                                /       \\              ");
+            Console.WriteLine("                                | \\  /  |              ");
+            Console.WriteLine("                                |       |          ''      ''");
+            Console.WriteLine("                                |   ^   |            ''  ''  ");
+            Console.WriteLine("                                 \\  _  /    /   ''   -----     ''      ");
+            Console.WriteLine("                                  -----    /          |||       ");
+            Console.WriteLine("                                   | |    /          / | \\        ");
+            Console.WriteLine("                                  / | \\  /          /  |  \\          ");
+            Console.WriteLine("                                 /  |  \\/              |        ");
+            Console.WriteLine("                                    |  /              / \\                  ");
+            Console.WriteLine("                                   / \\               /   \\                  ");
+            Console.WriteLine("                                  /   \\             /     \\               ");
+            Console.WriteLine("                                 /     \\           /       \\               ");
+            Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
+            Thread.Sleep(1500);
         }
     }
 }
