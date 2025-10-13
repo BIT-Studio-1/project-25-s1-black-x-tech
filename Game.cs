@@ -148,7 +148,7 @@ namespace studioTeam
             Console.Clear();
 
 
-            int ComputerHealth = 100, PlayerHealth =100, damage = 0;
+            int ComputerHealth = 50, PlayerHealth = 50, damage = 0;
             bool playerTurn = true, playerWin = false;
 
             Random rand = new Random();
@@ -179,29 +179,33 @@ namespace studioTeam
 
             while (ComputerHealth > 0 && PlayerHealth > 0)
             {
+                Console.WriteLine($"        Players Health: {PlayerHealth}            Computers Health: {ComputerHealth}");
+                Console.WriteLine("");
                 if (playerTurn)
                 {
                     Console.WriteLine("Your Turn!");
-                damage = playersTurn();
-                ComputerHealth -= damage;
-                Thread.Sleep(500);
-                Console.WriteLine($"\nYou did {damage} Damage!");
-                Console.WriteLine($"Computer Health is now {ComputerHealth}");
-                Thread.Sleep(2000);
-                Console.Clear();
+                    damage = playersTurn();
+                    ComputerHealth -= damage;
+                    playerHitsComputer();
+                    Thread.Sleep(500);
+                    Console.WriteLine($"\nYou did {damage} Damage!");
+                    Console.WriteLine($"Computer Health is now {ComputerHealth}");
+                    Thread.Sleep(500);
+                    Console.Clear();
                     playerTurn = false;
                     playerWin = true;
                 }
                 else
                 {
                     Console.WriteLine("Computer's Turn!");
-                damage = computersTurn();
-                PlayerHealth -= damage;
-                Thread.Sleep(500);
-                Console.WriteLine($"\nComputer did {damage} Damage!");
-                Console.WriteLine($"Your Health is now {PlayerHealth}");
-                Thread.Sleep(2000);
-                Console.Clear();
+                    damage = computersTurn();
+                    PlayerHealth -= damage;
+                    // Simulate computer attack animation
+                    Thread.Sleep(500);
+                    Console.WriteLine($"\nComputer did {damage} Damage!");
+                    Console.WriteLine($"Your Health is now {PlayerHealth}");
+                    Thread.Sleep(500);
+                    Console.Clear();
                     playerTurn = true;
                     playerWin = false;
                 }
@@ -216,6 +220,9 @@ namespace studioTeam
                 Console.WriteLine("You Lose!");
             }
             Console.ReadLine();
+
+
+
 
         }
 
