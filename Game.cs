@@ -114,7 +114,7 @@ namespace studioTeam
             Console.WriteLine();
 
 
-            Thread.Sleep(500);
+            Thread.Sleep(1500);
             
 
 
@@ -139,21 +139,21 @@ namespace studioTeam
 
 
 
-            Thread.Sleep(2000);
-
+            Thread.Sleep(1500);
+            Console.Clear();
 
 
             int ComputerHealth = 100, PlayerHealth =100;
 
             Random rand = new Random();
 
-
-
-           
+            Console.WriteLine("WELCOME TO THE BATTLE TO DEATH!!!");
+            Console.WriteLine("");
+            Console.WriteLine("Press any key to begin...");
 
             Console.ReadLine();
 
-
+            Console.Clear();
             //Below is an example ive written to show how to call the method function for the moves
             string keyInput;
             Console.WriteLine("Press U to uppercut, R to Roundhouse or S to Sword Slash");
@@ -162,7 +162,17 @@ namespace studioTeam
             Console.WriteLine($"You did {Moves(newKey)} Damage!");
            
             Thread.Sleep(2000);
+
+
+
+
         }
+
+
+
+
+
+
         public static int Moves(char key)
         {
             int damage = 0;
