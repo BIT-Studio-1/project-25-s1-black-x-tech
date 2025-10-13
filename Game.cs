@@ -149,6 +149,7 @@ namespace studioTeam
 
 
             int ComputerHealth = 100, PlayerHealth =100, damage = 0;
+            bool playerTurn = true, playerWin = false;
 
             Random rand = new Random();
 
@@ -174,13 +175,67 @@ namespace studioTeam
 
             Thread.Sleep(2000);
 
+            Console.Clear();
 
-
+            while (ComputerHealth > 0 && PlayerHealth > 0)
+            {
+                if (playerTurn)
+                {
+                    Console.WriteLine("Your Turn!");
+                damage = playersTurn();
+                ComputerHealth -= damage;
+                Thread.Sleep(500);
+                Console.WriteLine($"\nYou did {damage} Damage!");
+                Console.WriteLine($"Computer Health is now {ComputerHealth}");
+                Thread.Sleep(2000);
+                Console.Clear();
+                    playerTurn = false;
+                    playerWin = true;
+                }
+                else
+                {
+                    Console.WriteLine("Computer's Turn!");
+                damage = computersTurn();
+                PlayerHealth -= damage;
+                Thread.Sleep(500);
+                Console.WriteLine($"\nComputer did {damage} Damage!");
+                Console.WriteLine($"Your Health is now {PlayerHealth}");
+                Thread.Sleep(2000);
+                Console.Clear();
+                    playerTurn = true;
+                    playerWin = false;
+                }
+                
+            }
+            if (playerWin)
+            {
+                Console.WriteLine("You Win!");
+            }
+            else
+            {
+                Console.WriteLine("You Lose!");
+            }
+            Console.ReadLine();
 
         }
 
+        public static int playersTurn()
+        {
+            Console.WriteLine("Press U to uppercut, R to Roundhouse or S to Sword Slash");
+            char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
+            int damage = Moves(keyInput);
 
-
+            return damage;
+        }
+        public static int computersTurn()
+        {
+            Random rand = new Random();
+            char[] moves = { 'U', 'R', 'S' };
+            int index = rand.Next(moves.Length);
+            char computerMove = moves[index];
+            int damage = Moves(computerMove);
+            return damage;
+        }
 
 
 
