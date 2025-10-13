@@ -61,11 +61,15 @@ namespace studioTeam
                                             Others Will Not
 
             
-
+                                         
 
                                                                         
             ");
             Thread.Sleep(3000);
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+
+
             // Frame 3
             Console.Clear();
             Console.WriteLine(@"                                       
@@ -144,7 +148,7 @@ namespace studioTeam
             Console.Clear();
 
 
-            int ComputerHealth = 100, PlayerHealth =100;
+            int ComputerHealth = 100, PlayerHealth =100, damage = 0;
 
             Random rand = new Random();
 
@@ -152,16 +156,22 @@ namespace studioTeam
             Console.WriteLine("");
             Console.WriteLine("Press any key to begin...");
 
-            Console.ReadLine();
+            Console.ReadKey();
 
             Console.Clear();
             //Below is an example ive written to show how to call the method function for the moves
-            string keyInput;
+            
             Console.WriteLine("Press U to uppercut, R to Roundhouse or S to Sword Slash");
-            keyInput = Console.ReadLine().ToUpper();
-            char newKey = Convert.ToChar(keyInput);
-            Console.WriteLine($"You did {Moves(newKey)} Damage!");
-           
+            char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
+
+            damage = Moves(keyInput);
+            ComputerHealth -= damage;
+            Thread.Sleep(500);
+            Console.WriteLine($"\nYou did {damage} Damage!");
+
+            Console.WriteLine($"Computer Health is now {ComputerHealth}");
+
+
             Thread.Sleep(2000);
 
 
