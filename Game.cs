@@ -161,7 +161,10 @@ namespace studioTeam
 
             Console.Clear();
             //Below is an example ive written to show how to call the method function for the moves
-            
+            Console.WriteLine($"        Players Health: {PlayerHealth}            Computers Health: {ComputerHealth}");
+            Console.WriteLine("");
+            Console.WriteLine("Your Turn pick a move!!!");
+            Console.WriteLine("");
             Console.WriteLine("Press U to uppercut, R to Roundhouse or S to Sword Slash");
             char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
 
@@ -213,15 +216,22 @@ namespace studioTeam
             }
             if (playerWin)
             {
-                Console.WriteLine("You Win!");
+                Console.WriteLine("             YOU WIN!!");
+
+                Console.WriteLine("\n          WELCOME TO THE NEXT LEVEL HAHAHAHA....");
+                Console.WriteLine("\n Press any key to continue...");
             }
             else
             {
-                Console.WriteLine("You Lose!");
+                Console.WriteLine("            YOU LOSE!!!");
             }
-            Console.ReadLine();
+            Console.ReadKey();
+
+            //this is where the method will go for level 2
 
 
+            //Now we have gotten this far our next levels will be written in methods
+            //create your method at the bottom of the page and call it above this commit
 
 
         }
