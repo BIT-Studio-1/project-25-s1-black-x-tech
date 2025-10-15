@@ -9,8 +9,8 @@ namespace studioTeam
         {
             Console.WriteLine("Hello, Welcome to Black X Tech!");
 
-            playerHitsComputer();
-            Console.ReadLine();
+            //playerHitsComputer();
+            //Console.ReadLine();
 
             // Frame 1
             Console.Clear();
@@ -200,7 +200,7 @@ namespace studioTeam
                     Console.WriteLine("Computer's Turn!");
                     damage = computersTurn();
                     PlayerHealth -= damage;
-                    // Simulate computer attack animation
+                    computerHitsPlayer();
                     Thread.Sleep(500);
                     Console.WriteLine($"\nComputer did {damage} Damage!");
                     Console.WriteLine($"Your Health is now {PlayerHealth}");
@@ -290,7 +290,7 @@ namespace studioTeam
             Console.WriteLine("         /   \\                                                                                /     \\   ");
             Console.WriteLine("        /     \\                                                                              /       \\    ");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
-            Thread.Sleep(1500);
+            Thread.Sleep(300);
 
 
             Console.Clear();
@@ -309,7 +309,7 @@ namespace studioTeam
             Console.WriteLine("              /   \\                                                                             /     \\   ");
             Console.WriteLine("             /     \\                                                                           /       \\    ");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
-            Thread.Sleep(1500);
+            Thread.Sleep(300);
 
 
             Console.Clear();
@@ -328,7 +328,7 @@ namespace studioTeam
             Console.WriteLine("                       /   \\                                                                    /     \\   ");
             Console.WriteLine("                      /     \\                                                                  /       \\    ");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
-            Thread.Sleep(1500);
+            Thread.Sleep(300);
 
 
             Console.Clear();
@@ -347,7 +347,7 @@ namespace studioTeam
             Console.WriteLine("                                  /   \\                                                         /     \\   ");
             Console.WriteLine("                                 /     \\                                                       /       \\    ");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
-            Thread.Sleep(1500);
+            Thread.Sleep(300);
 
 
             Console.Clear();
@@ -366,7 +366,7 @@ namespace studioTeam
             Console.WriteLine("                                  /   \\           /     \\   ");
             Console.WriteLine("                                 /     \\         /       \\    ");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
-            Thread.Sleep(1500);
+            Thread.Sleep(300);
 
 
 
@@ -386,7 +386,7 @@ namespace studioTeam
             Console.WriteLine("                                  /   \\             /     \\               ");
             Console.WriteLine("                                 /     \\           /       \\               ");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
-            Thread.Sleep(1500);
+            Thread.Sleep(300);
         }
 
         public static void computerHitsPlayer()
@@ -408,7 +408,7 @@ namespace studioTeam
             Console.WriteLine("         /   \\                                                                                /     \\   ");
             Console.WriteLine("        /     \\                                                                              /       \\    ");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
-            Thread.Sleep(1500);
+            Thread.Sleep(300);
 
 
             Console.Clear();
@@ -427,7 +427,7 @@ namespace studioTeam
             Console.WriteLine("              /   \\                                                                             /     \\   ");
             Console.WriteLine("             /     \\                                                                           /       \\    ");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
-            Thread.Sleep(1500);
+            Thread.Sleep(300);
 
 
             Console.Clear();
@@ -446,7 +446,7 @@ namespace studioTeam
             Console.WriteLine("                       /   \\                                                                    /     \\   ");
             Console.WriteLine("                      /     \\                                                                  /       \\    ");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
-            Thread.Sleep(1500);
+            Thread.Sleep(300);
 
 
             Console.Clear();
@@ -465,7 +465,7 @@ namespace studioTeam
             Console.WriteLine("                                  /   \\                                                         /     \\   ");
             Console.WriteLine("                                 /     \\                                                       /       \\    ");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
-            Thread.Sleep(1500);
+            Thread.Sleep(300);
 
 
             Console.Clear();
@@ -484,7 +484,7 @@ namespace studioTeam
             Console.WriteLine("                                  /   \\           /     \\   ");
             Console.WriteLine("                                 /     \\         /       \\    ");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
-            Thread.Sleep(1500);
+            Thread.Sleep(300);
 
 
 
