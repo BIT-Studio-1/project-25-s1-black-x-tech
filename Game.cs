@@ -494,7 +494,7 @@ namespace studioTeam
             Console.WriteLine("                                  /   \\           /     \\   ");
             Console.WriteLine("                                 /     \\         /       \\    ");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
-            Thread.Sleep(3000);
+            Thread.Sleep(300);
 
 
             Console.Clear();
@@ -513,7 +513,7 @@ namespace studioTeam
             Console.WriteLine("                                  /   \\           /     \\   ");
             Console.WriteLine("                                 /     \\         /       \\    ");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
-            Thread.Sleep(3000);
+            Thread.Sleep(300);
 
             Console.Clear();
             Console.WriteLine("                                 . --- .            _____       ");
@@ -531,7 +531,7 @@ namespace studioTeam
             Console.WriteLine("                                  /   \\           /     \\   ");
             Console.WriteLine("                                 /     \\         /       \\    ");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
-            Thread.Sleep(3000);
+            Thread.Sleep(300);
 
             Console.Clear();
             Console.WriteLine("                                                    _____       ");
@@ -549,7 +549,7 @@ namespace studioTeam
             Console.WriteLine("                                  /   \\           /     \\   ");
             Console.WriteLine("                                 /     \\         /       \\    ");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
-            Thread.Sleep(3000);
+            Thread.Sleep(300);
 
         }
     }
