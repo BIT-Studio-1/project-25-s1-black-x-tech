@@ -254,10 +254,19 @@ namespace studioTeam
             damage = 0;
             playerTurn = true;
             playerWin = false;
+            Console.WriteLine(@"            You Picked Up His ChestPlate!          
+                                                    +25 Health!
 
-            Console.WriteLine("             You're Pretty Good at Fighting, Welcome To Level 2!");
-            Console.WriteLine("                     A New Challenger Has Appeared!              ");
-            Console.WriteLine("");  
+                                            Your Pretty Good at Fighting, 
+                               ");
+            Console.WriteLine(@"
+                                                Welcome To Level 2!
+                                            A New Challenger Has Appeared!
+                                ");
+            
+            
+            
+            Console.WriteLine("You Picked Up His Sharp New Sword \n You Now Do 5 Extra Damage!");  
         }
 
         public static void Level3(int ComputerHealth, int PlayerHealth, int damage, bool playerTurn, bool playerWin)
