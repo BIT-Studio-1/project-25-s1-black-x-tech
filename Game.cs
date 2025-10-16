@@ -237,13 +237,13 @@ namespace studioTeam
             //this is where the method will go for level 2
             Level2(ComputerHealth, PlayerHealth, damage, playerTurn, playerWin);
             //this is where the method will go for level 3
-
+            Level3(ComputerHealth, PlayerHealth, damage, playerTurn, playerWin);
             //this is where the method will go for level 4
 
             //this is where the method will go for level 5
 
             //this is where the method will go for level 6
-            Level6();
+
 
         }
 
@@ -277,7 +277,7 @@ namespace studioTeam
             playerTurn = true;
             playerWin = false;
 
-            Console.WriteLine("           You Sharpened 
+            Console.WriteLine("           You Sharpened       ");
             Console.WriteLine("          Finally! A Worthy Opponent!   ");
             Console.WriteLine("     Use Your New Sword To Slay The Challenger!");
             Console.WriteLine("");
@@ -301,17 +301,7 @@ namespace studioTeam
         //Paul
         public static void Level6()
         {
-            Console.WriteLine("                             Welcome to level 6... ");
-            Console.WriteLine("");
-            Console.WriteLine("                  You Have teleported to the year 3288 get in the ship  ");
-            Console.WriteLine(@"                        
-                                                               Destroy the enemy ships...
-                                                                                
-                                                                     Good Luck
-
-
-
-             ");
+            Console.WriteLine("                        Welcome to level 6... ");
         }
 
 
