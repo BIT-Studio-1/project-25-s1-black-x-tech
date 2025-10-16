@@ -52,18 +52,23 @@ namespace studioTeam
 
 
 
-                                This Game is a Medivel RPG Fighter Game
-            
-                                You Will be Asked to Press Different Keys
-                              to Make Different Decisions Along your Journey 
+                               This Game is a RPG Fighter Game, Each Level
+                               Will Have You Fighting Different Characters
+                                
+                                 You Will Have To Pick Different Attacks,
+                              Each Attack Deals a Different Amount Of Damage
+                                 And You Cannot Use The Same Attack Twice
 
-                                     Some Decisions Will Benefit You,
-                                            Others Will Not
 
-            
-                                         
 
-                                                                        
+                                       --------------------------
+                                       |        Moves:          |
+                                       --------------------------
+                                       | Press U to uppercut,   |
+                                       | Press R to Roundhouse, |
+                                       | Press S to Sword Slash |
+                                       -------------------------- 
+                                             
             ");
             Thread.Sleep(3000);
             Console.WriteLine("Press any key to continue...");
