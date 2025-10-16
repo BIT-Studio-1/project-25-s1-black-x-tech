@@ -479,7 +479,7 @@ namespace studioTeam
 
 
             Console.Clear();
-            Console.WriteLine("                                 . --- .           _____       ");
+            Console.WriteLine("                                 . --- .            _____       ");
             Console.WriteLine("                                /       \\         /     \\      ");
             Console.WriteLine("                                | \\  /  |        |  o o  |       ");
             Console.WriteLine("                                |       |        |   ^   |       ");
@@ -494,11 +494,11 @@ namespace studioTeam
             Console.WriteLine("                                  /   \\           /     \\   ");
             Console.WriteLine("                                 /     \\         /       \\    ");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
-            Thread.Sleep(300);
+            Thread.Sleep(3000);
 
 
             Console.Clear();
-            Console.WriteLine("                                 . --- .           _____       ");
+            Console.WriteLine("                                 . --- .            _____       ");
             Console.WriteLine("                                /       \\         /     \\      ");
             Console.WriteLine("                                | \\  /  |        |  o o  |       ");
             Console.WriteLine("                                |       |        |   ^   |       ");
@@ -513,10 +513,10 @@ namespace studioTeam
             Console.WriteLine("                                  /   \\           /     \\   ");
             Console.WriteLine("                                 /     \\         /       \\    ");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
-            Thread.Sleep(300);
+            Thread.Sleep(3000);
 
             Console.Clear();
-            Console.WriteLine("                                 . --- .           _____       ");
+            Console.WriteLine("                                 . --- .            _____       ");
             Console.WriteLine("                                /       \\         /     \\      ");
             Console.WriteLine("                                | \\  /  |        |  o o  |       ");
             Console.WriteLine("                                |       |        |   ^   |       ");
@@ -531,14 +531,14 @@ namespace studioTeam
             Console.WriteLine("                                  /   \\           /     \\   ");
             Console.WriteLine("                                 /     \\         /       \\    ");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
-            Thread.Sleep(300);
+            Thread.Sleep(3000);
 
             Console.Clear();
-            Console.WriteLine("                                                   _____       ");
+            Console.WriteLine("                                                    _____       ");
             Console.WriteLine("                                                   /     \\      ");
             Console.WriteLine("                               '   ' '            |  o o  |       ");
-            Console.WriteLine("                          '    '  ' '  '        |   ^   |       ");
-            Console.WriteLine("                               '' '               \\ \\_/ /      ");
+            Console.WriteLine("                          '    '  ' '  '          |   ^   |       ");
+            Console.WriteLine("                               '' '                \\ \\_/ /      ");
             Console.WriteLine("                              ' '   ' '             -----         ");
             Console.WriteLine("                                 '     '             |||       ");
             Console.WriteLine("                                  (((           O-----| \\        ");
@@ -549,7 +549,7 @@ namespace studioTeam
             Console.WriteLine("                                  /   \\           /     \\   ");
             Console.WriteLine("                                 /     \\         /       \\    ");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
-            Thread.Sleep(300);
+            Thread.Sleep(3000);
 
         }
     }
