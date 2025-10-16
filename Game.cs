@@ -294,14 +294,22 @@ namespace studioTeam
             playerTurn = true;
             playerWin = false;
 
-            Console.WriteLine("             Your Pretty Good at Fighting, Welcome To Level 2!");
+            Console.WriteLine("             You're Pretty Good at Fighting, Welcome To Level 2!");
             Console.WriteLine("                     A New Challenger Has Appeared!              ");
             Console.WriteLine("");  
         }
 
-        public static void Level3()
+        public static void Level3(int ComputerHealth, int PlayerHealth, int damage, bool playerTurn, bool playerWin)
         {
-            //Write your code for level 3 here
+            ComputerHealth = 85;
+            PlayerHealth = 75;
+            damage = 5;
+            playerTurn = true;
+            playerWin = false;
+
+            Console.WriteLine("          Finally! A Worthy Opponent!   ");
+            Console.WriteLine("     Use Your New Sword To Slay The Challenger!");
+            Console.WriteLine("");
         }
 
         public static void Level4()
