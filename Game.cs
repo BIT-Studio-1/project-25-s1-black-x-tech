@@ -32,7 +32,7 @@ namespace studioTeam
             Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]\r\n| _   _ ||  o  ||  _  |    |  |  |  | |  | |      ||  |  |    |  o  |    |  |  ||     ||  D  )(   \\_  /  [_ \r\n|  \\_/  ||     ||  |  |    |  |  |  | |  | |_|  |_||  _  |    |     |    |  _  ||  O  ||    /  \\__  ||    _]\r\n|   |   ||  _  ||  |  |    |  `  '  | |  |   |  |  |  |  |    |  _  |    |  |  ||     ||    \\  /  \\ ||   [_ \r\n|   |   ||  |  ||  |  |     \\      /  |  |   |  |  |  |  |    |  |  |    |  |  ||     ||  .  \\ \\    ||     |\r\n|___|___||__|__||__|__|      \\_/\\_/  |____|  |__|  |__|__|    |__|__|    |__|__| \\___/ |__|\\_|  \\___||_____|\r\n                                                                                                            ");
 
 
-      
+
 
 
             Thread.Sleep(2000);
@@ -103,7 +103,7 @@ namespace studioTeam
             Console.WriteLine("    *           *    *       *     *  *           *    *       *     * ");
             Console.WriteLine();
 
-            
+
             Console.WriteLine("       &&&                 _____                  &&& ");
             Console.WriteLine("      &&&&&               /     \\                &&&&&");
             Console.WriteLine("     &&&&&&&             |  o o  |              &&&&&&& ");
@@ -125,7 +125,7 @@ namespace studioTeam
 
 
             Thread.Sleep(1500);
-            
+
 
 
             // Frame 5
@@ -217,7 +217,7 @@ namespace studioTeam
                     playerTurn = true;
                     playerWin = false;
                 }
-                
+
             }
             if (playerWin)
             {
@@ -232,14 +232,35 @@ namespace studioTeam
             }
             Console.ReadKey();
 
+
             //this is where the method will go for level 2
 
+            //this is where the method will go for level 3
 
-            //Now we have gotten this far our next levels will be written in methods
-            //create your method at the bottom of the page and call it above this commit
+            //this is where the method will go for level 4
 
 
         }
+
+        public static void Level2()
+        {
+            //Write your code for level 2 here
+        }
+
+        public static void Level3()
+        {
+            //Write your code for level 3 here
+        }
+
+        public static void Level4()
+        {
+            //Write your code for level 4 here
+        }
+
+            
+
+
+        
 
         public static int playersTurn()
         {
