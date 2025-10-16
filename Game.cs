@@ -75,28 +75,52 @@ namespace studioTeam
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
 
-
-            // Frame 3
             Console.Clear();
-            Console.WriteLine(@"                                       
+
+            Console.WriteLine(@"             
+
+
+
+
+                                  The morning is calm and warm over out farm.
+                                     The fields glow in the soft light,
+                                  and the animals move quietly around the barn.
+                              I step outside, taking in the gentle start to the day
             
 
 
 
-                            |>>>                     |>>>
-                            |                        |
-                        _  _|_  _                _  _|_  _
-                       | |_| |_| |              | |_| |_| |
-                       \  .      /              \  .      /
-                        \_______/                \_______/
-                         |     |-----.      .----|     |
-                         |     |     |      |    |     |
-                         |     |     |      |    |     |
-                         |     |     |      |    |     |
-                        _|_____|_____|__  __|____|_____|_
-                       |________________||________________|
-");
-            Thread.Sleep(1500);
+                               
+
+            
+                                         
+
+                                                                        
+            ");
+
+            Thread.Sleep(5000);
+
+            // Frame 3
+            //Console.Clear();
+            //Console.WriteLine(@"                                       
+
+
+
+
+            //            |>>>                     |>>>
+            //             |                        |
+            //         _  _|_  _                _  _|_  _
+            //        | |_| |_| |              | |_| |_| |
+            //        \  .      /              \  .      /
+            //         \_______/                \_______/
+            //          |     |-----.      .----|     |
+            //          |     |     |      |    |     |
+            //          |     |     |      |    |     |
+            //           |     |     |      |    |     |
+            //         _|_____|_____|__  __|____|_____|_
+            //         |________________||________________|
+            //");
+            //Thread.Sleep(1500);
             Console.Clear();
 
             Console.WriteLine("    *     *       *     *     *   *   *         *     *       *     *     *   *   *");
@@ -104,6 +128,50 @@ namespace studioTeam
             Console.WriteLine("    *           *    *       *     *  *           *    *       *     * ");
             Console.WriteLine();
 
+            Console.WriteLine();
+            Console.WriteLine("        . --- .                       ___________                   ");
+            Console.WriteLine("       /       \\                    /            \\                 ");
+            Console.WriteLine("       | \\  /  |                   /______________\\                ");
+            Console.WriteLine("       |       |                   |   _    |_|   |                ");
+            Console.WriteLine("       |   ^   |                   |__|_|_________|                 ");
+            Console.WriteLine("        \\  _  /    /                  | |                          ");
+            Console.WriteLine("         -----    /                  /   /                        ");
+            Console.WriteLine("          | |    /                 /      /                        ");
+            Console.WriteLine("         / | \\  /                /         /                      ");
+            Console.WriteLine("        /  |  \\/                /          /                        ");
+            Console.WriteLine("___________|__/________________/           /______________________");
+            Console.WriteLine("          / \\                                                   ");
+            Console.WriteLine("         /   \\                                                  ");
+            Console.WriteLine("        /     \\                                                 ");
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+
+            Thread.Sleep(1500);
+
+            Console.Clear();
+            Console.WriteLine(@"             
+
+
+
+
+                                What is that in the distance it looks dangerous
+
+                                ""Who are you and what are you doing at my house""
+
+            
+                                         
+
+                                                                        
+            ");
+            Thread.Sleep(3000);
+            Console.Clear();
+
+            // Frame 5
+
+            Console.WriteLine("    *     *       *     *     *   *   *         *     *       *     *     *   *   *");
+            Console.WriteLine(" *       *     *       *     *      *    *     *       *     *     *   *   *");
+            Console.WriteLine("    *           *    *       *     *  *           *    *       *     * ");
+            Console.WriteLine();
 
             Console.WriteLine("       &&&                 _____                  &&& ");
             Console.WriteLine("      &&&&&               /     \\                &&&&&");
@@ -122,37 +190,34 @@ namespace studioTeam
             // Ground (grass)
             Console.WriteLine("-----------------------------------------------------------------");
             Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
-            Console.WriteLine();
-
-
-            Thread.Sleep(1500);
-
-
-
-            // Frame 5
-            Console.Clear();
-            Console.WriteLine("        . --- .                       ___________                   ");
-            Console.WriteLine("       /       \\                    /            \\                 ");
-            Console.WriteLine("       | \\  /  |                   /______________\\                ");
-            Console.WriteLine("       |       |                   |   _    |_|   |                ");
-            Console.WriteLine("       |   ^   |                   |__|_|_________|                 ");
-            Console.WriteLine("        \\  _  /    /                  | |                          ");
-            Console.WriteLine("         -----    /                  /   /                        ");
-            Console.WriteLine("          | |    /                 /      /                        ");
-            Console.WriteLine("         / | \\  /                /         /                      ");
-            Console.WriteLine("        /  |  \\/                /          /                        ");
-            Console.WriteLine("___________|__/________________/           /______________________");
-            Console.WriteLine("          / \\                                                   ");
-            Console.WriteLine("         /   \\                                                  ");
-            Console.WriteLine("        /     \\                                                 ");
-            Console.WriteLine("-----------------------------------------------------------------");
-            Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+            
 
 
 
             Thread.Sleep(1500);
             Console.Clear();
 
+            Console.WriteLine(@"             
+
+
+
+
+
+
+
+
+                                  ""I'm here to kill you""
+            
+
+
+
+                               
+
+            
+                                         
+
+                                                                        
+            ");
 
             int ComputerHealth = 50, PlayerHealth = 50, damage = 0;
             bool playerTurn = true, playerWin = false;
