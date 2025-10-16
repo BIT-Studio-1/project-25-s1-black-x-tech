@@ -300,7 +300,17 @@ namespace studioTeam
         //Paul
         public static void Level6()
         {
-            Console.WriteLine("                        Welcome to level 6... ");
+            Console.WriteLine("                             Welcome to level 6... ");
+            Console.WriteLine("");
+            Console.WriteLine("                  You Have teleported to the year 3288 get in the ship  ");
+            Console.WriteLine(@"                        
+                                                               Destroy the enemy ships...
+                                                                                
+                                                                     Good Luck
+
+
+
+             ");
         }
 
 
