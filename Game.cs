@@ -359,20 +359,7 @@ namespace studioTeam
             return damage;
         }
 
-        public static void Level2()
-        {
-            //Write your code for level 2 here
-        }
-
-        public static void Level3()
-        {
-            //Write your code for level 3 here
-        }
-
-        public static void Level4()
-        {
-            //Write your code for level 4 here
-        }
+    
         public static void playerHitsComputer()
         {
             Console.Clear();
