@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace studioTeam
 {
@@ -234,7 +235,7 @@ namespace studioTeam
 
 
             //this is where the method will go for level 2
-
+            Level2(ComputerHealth, PlayerHealth, damage, playerTurn, playerWin);
             //this is where the method will go for level 3
 
             //this is where the method will go for level 4
@@ -245,10 +246,18 @@ namespace studioTeam
 
 
         }
-        //Bailey
-        public static void Level2()
+
+        public static void Level2(int ComputerHealth, int PlayerHealth, int damage, bool playerTurn, bool playerWin)
         {
-            //Write your code for level 2 here
+            ComputerHealth = 50;
+            PlayerHealth = 75;
+            damage = 0;
+            playerTurn = true;
+            playerWin = false;
+
+            Console.WriteLine("             Your Pretty Good at Fighting, Welcome To Level 2!");
+            Console.WriteLine("                     A New Challenger Has Appeared!              ");
+            Console.WriteLine("");  
         }
         
 
