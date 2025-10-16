@@ -286,7 +286,7 @@ namespace studioTeam
         //Paul
         public static void Level6()
         {
-            //Write your code for level 6 here
+            Console.WriteLine("                        Welcome to level 6... ");
         }
 
 
