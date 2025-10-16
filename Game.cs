@@ -75,28 +75,75 @@ namespace studioTeam
             Console.WriteLine("Press any key to continue...");
             Console.ReadKey();
 
-
-            // Frame 3
             Console.Clear();
-            Console.WriteLine(@"                                       
+
+            Console.WriteLine(@"             
+
+
+
+
+                                  The morning is calm and warm over out farm.
+                                     The fields glow in the soft light,
+                                  and the animals move quietly around the barn.
+                              I step outside, taking in the gentle start to the day
             
 
 
 
-                            |>>>                     |>>>
-                            |                        |
-                        _  _|_  _                _  _|_  _
-                       | |_| |_| |              | |_| |_| |
-                       \  .      /              \  .      /
-                        \_______/                \_______/
-                         |     |-----.      .----|     |
-                         |     |     |      |    |     |
-                         |     |     |      |    |     |
-                         |     |     |      |    |     |
-                        _|_____|_____|__  __|____|_____|_
-                       |________________||________________|
-");
+                               
+
+            
+                                         
+
+                                                                        
+            ");
+
+            Thread.Sleep(5000);
+
+
+
+            Console.WriteLine("    *     *       *     *     *   *   *         *     *       *     *     *   *   *");
+            Console.WriteLine(" *       *     *       *     *      *    *     *       *     *     *   *   *");
+            Console.WriteLine("    *           *    *       *     *  *           *    *       *     * ");
+            Console.WriteLine();
+
+
+            Console.WriteLine("        . --- .                       ___________                   ");
+            Console.WriteLine("       /       \\                    /            \\                 ");
+            Console.WriteLine("       | \\  /  |                   /______________\\                ");
+            Console.WriteLine("       |       |                   |   _    |_|   |                ");
+            Console.WriteLine("       |   ^   |                   |__|_|_________|                 ");
+            Console.WriteLine("        \\  _  /    /                  | |                          ");
+            Console.WriteLine("         -----    /                  /   /                        ");
+            Console.WriteLine("          | |    /                 /      /                        ");
+            Console.WriteLine("         / | \\  /                /         /                      ");
+            Console.WriteLine("        /  |  \\/                /          /                        ");
+            Console.WriteLine("___________|__/________________/           /______________________");
+            Console.WriteLine("          / \\                                                   ");
+            Console.WriteLine("         /   \\                                                  ");
+            Console.WriteLine("        /     \\                                                 ");
+            Console.WriteLine("-----------------------------------------------------------------");
+            Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+
             Thread.Sleep(1500);
+            Console.Clear();
+            Console.WriteLine(@"             
+
+
+
+
+                                What is that in the distance it looks dangerous
+
+                                ""Who are you and what are you doing at my house""
+
+            
+                                         
+
+                                                                        
+            ");
+            Thread.Sleep(3000);
+
+            // Frame 5
             Console.Clear();
 
             Console.WriteLine("    *     *       *     *     *   *   *         *     *       *     *     *   *   *");
@@ -126,32 +173,28 @@ namespace studioTeam
 
 
             Thread.Sleep(1500);
-
-
-
-            // Frame 5
             Console.Clear();
-            Console.WriteLine("        . --- .                       ___________                   ");
-            Console.WriteLine("       /       \\                    /            \\                 ");
-            Console.WriteLine("       | \\  /  |                   /______________\\                ");
-            Console.WriteLine("       |       |                   |   _    |_|   |                ");
-            Console.WriteLine("       |   ^   |                   |__|_|_________|                 ");
-            Console.WriteLine("        \\  _  /    /                  | |                          ");
-            Console.WriteLine("         -----    /                  /   /                        ");
-            Console.WriteLine("          | |    /                 /      /                        ");
-            Console.WriteLine("         / | \\  /                /         /                      ");
-            Console.WriteLine("        /  |  \\/                /          /                        ");
-            Console.WriteLine("___________|__/________________/           /______________________");
-            Console.WriteLine("          / \\                                                   ");
-            Console.WriteLine("         /   \\                                                  ");
-            Console.WriteLine("        /     \\                                                 ");
-            Console.WriteLine("-----------------------------------------------------------------");
-            Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
+
+            Console.WriteLine(@"             
 
 
 
-            Thread.Sleep(1500);
-            Console.Clear();
+
+                                  ""I'm here to kill you""
+            
+
+
+
+                               
+
+            
+                                         
+
+                                                                        
+            ");
+            Thread.Sleep(3000);
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
 
 
             int ComputerHealth = 50, PlayerHealth = 50, damage = 0;
@@ -316,7 +359,20 @@ namespace studioTeam
             return damage;
         }
 
+        public static void Level2()
+        {
+            //Write your code for level 2 here
+        }
 
+        public static void Level3()
+        {
+            //Write your code for level 3 here
+        }
+
+        public static void Level4()
+        {
+            //Write your code for level 4 here
+        }
         public static void playerHitsComputer()
         {
             Console.Clear();
@@ -399,14 +455,14 @@ namespace studioTeam
             Console.WriteLine("                                 . --- .           _____       ");
             Console.WriteLine("                                /       \\         /     \\      ");
             Console.WriteLine("                                | \\  /  |        |  o o  |       ");
-            Console.WriteLine("                                |       |        |   ^   |       ");
-            Console.WriteLine("                                |   ^   |         \\ \\_/ /      ");
-            Console.WriteLine("                                 \\  _  /    /      -----         ");
-            Console.WriteLine("                                  -----    /        |||       ");
-            Console.WriteLine("                                   | |    /        / | \\        ");
-            Console.WriteLine("                                  / | \\  /        /  |  \\          ");
-            Console.WriteLine("                                 /  |  \\/            |        ");
-            Console.WriteLine("                                    |  /            / \\   ");
+            Console.WriteLine("                                |       |  |     |   ^   |       ");
+            Console.WriteLine("                                |   ^   |  |      \\ \\_/ /      ");
+            Console.WriteLine("                                 \\  _  /  |        -----         ");
+            Console.WriteLine("                                  -----    |         |||       ");
+            Console.WriteLine("                                   | |_____T        / | \\        ");
+            Console.WriteLine("                                  / |              /  |  \\          ");
+            Console.WriteLine("                                 /  |                 |        ");
+            Console.WriteLine("                                    |               / \\   ");
             Console.WriteLine("                                   / \\             /   \\   ");
             Console.WriteLine("                                  /   \\           /     \\   ");
             Console.WriteLine("                                 /     \\         /       \\    ");
@@ -416,20 +472,20 @@ namespace studioTeam
 
 
             Console.Clear();
-            Console.WriteLine("                                 . --- .                  ");
-            Console.WriteLine("                                /       \\              ");
-            Console.WriteLine("                                | \\  /  |              ");
-            Console.WriteLine("                                |       |          ''      ''");
-            Console.WriteLine("                                |   ^   |            ''  ''  ");
-            Console.WriteLine("                                 \\  _  /    /   ''   -----     ''      ");
-            Console.WriteLine("                                  -----    /          |||       ");
-            Console.WriteLine("                                   | |    /          / | \\        ");
-            Console.WriteLine("                                  / | \\  /          /  |  \\          ");
-            Console.WriteLine("                                 /  |  \\/              |        ");
-            Console.WriteLine("                                    |  /              / \\                  ");
-            Console.WriteLine("                                   / \\               /   \\                  ");
-            Console.WriteLine("                                  /   \\             /     \\               ");
-            Console.WriteLine("                                 /     \\           /       \\               ");
+            Console.WriteLine("                                 . --- .                     '   '  '                       ");
+            Console.WriteLine("                                /       \\               '    ~      ~                   ");
+            Console.WriteLine("                                | \\  /  |             ~   ~     ' ~  '     ");
+            Console.WriteLine("                                |       |             ~   '   ~  ~   ' ~           ");
+            Console.WriteLine("                                |   ^   |              ~    '   ~           ");
+            Console.WriteLine("                                 \\  _  /            ----- '     '  '                    ");
+            Console.WriteLine("                                  -----               |||                                     ");
+            Console.WriteLine("                                   | |               / | \\                       ");
+            Console.WriteLine("                                  / | \\   ' ' ' '  /  |  \\                         ");
+            Console.WriteLine("                                 /  | -\\|--------     |                       ");
+            Console.WriteLine("                                    |     ' ' ' '    / \\                                 ");
+            Console.WriteLine("                                   / \\              /   \\                                 ");
+            Console.WriteLine("                                  /   \\            /     \\                              ");
+            Console.WriteLine("                                 /     \\          /       \\               ");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
             Thread.Sleep(300);
         }
@@ -584,8 +640,38 @@ namespace studioTeam
             Console.WriteLine("                                  /   \\           /     \\   ");
             Console.WriteLine("                                 /     \\         /       \\    ");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
-            Thread.Sleep(400);
+            Thread.Sleep(300);
 
+
+
+
+
+            // Frame 3
+            Console.Clear();
+            Console.WriteLine(@"                                       
+            
+
+
+
+                            |>>>                     |>>>
+                            |                        |
+                        _  _|_  _                _  _|_  _
+                       | |_| |_| |              | |_| |_| |
+                       \  .      /              \  .      /
+                        \_______/                \_______/
+                         |     |-----.      .----|     |
+                         |     |     |      |    |     |
+                         |     |     |      |    |     |
+                         |     |     |      |    |     |
+                        _|_____|_____|__  __|____|_____|_
+                       |________________||________________|
+");
+            Thread.Sleep(1500);
+            Console.Clear();
         }
     }
 }
+
+
+
+
