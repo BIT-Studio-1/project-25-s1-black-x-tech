@@ -549,11 +549,7 @@ namespace studioTeam
             Console.WriteLine("                                  /   \\           /     \\   ");
             Console.WriteLine("                                 /     \\         /       \\    ");
             Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
-<<<<<<< HEAD
-            Thread.Sleep(300);
-=======
             Thread.Sleep(400);
->>>>>>> 7b6a3682bb3e2975f94bdc519aed80f7bef232c3
 
         }
     }
