@@ -12,6 +12,7 @@ namespace studioTeam
 
             //playerHitsComputer();
             //Console.ReadLine();
+            //Level6();   
 
             // Frame 1
             Console.Clear();
@@ -432,6 +433,198 @@ namespace studioTeam
         public static void Level6()
         {
             Console.WriteLine("                        Welcome to level 6... ");
+
+            PlaySpaceInvaders();
+        }
+
+        public static void PlaySpaceInvaders()
+        {
+            int playerPos = 10;
+            int enemyX = 10;
+            int enemyY = 2;
+            int bulletX = -1;
+            int bulletY = -1;
+            int enemyBulletX = -1;
+            int enemyBulletY = -1;
+            bool gameOver = false;
+            int playerLives = 3;
+            int enemyLives = 3;
+            int enemyDirection = 1;
+            int moveTimer = 0;
+            Random rand = new Random();
+            int shootTimer = 0;
+            string winner = "";
+
+            Console.CursorVisible = false;
+
+            while (!gameOver)
+            {
+                // Input
+                if (Console.KeyAvailable)
+                {
+                    var key = Console.ReadKey(true).Key;
+                    if (key == ConsoleKey.LeftArrow && playerPos > 0)
+                        playerPos--;
+                    if (key == ConsoleKey.RightArrow && playerPos < 18)
+                        playerPos++;
+                    if (key == ConsoleKey.Spacebar && bulletY == -1)
+                    {
+                        bulletX = playerPos + 1;
+                        bulletY = 18;
+                    }
+                    if (key == ConsoleKey.Escape)
+                    {
+                        gameOver = true;
+                        winner = "Nobody";
+                    }
+                }
+
+                // Move enemy side to side
+                moveTimer++;
+                if (moveTimer > 5)
+                {
+                    enemyX += enemyDirection;
+
+                    // Change direction at edges
+                    if (enemyX <= 0 || enemyX >= 18)
+                        enemyDirection *= -1;
+
+                    moveTimer = 0;
+                }
+
+                // Enemy shoots randomly
+                shootTimer++;
+                if (shootTimer > 15 && enemyBulletY == -1 && rand.Next(0, 3) == 0)
+                {
+                    enemyBulletX = enemyX + 1;
+                    enemyBulletY = enemyY + 3;
+                    shootTimer = 0;
+                }
+
+                // Update player bullet
+                if (bulletY > -1)
+                {
+                    bulletY--;
+                    if (bulletY < 0)
+                        bulletY = -1;
+                }
+
+                // Update enemy bullet
+                if (enemyBulletY > -1)
+                {
+                    enemyBulletY++;
+                    if (enemyBulletY > 23)
+                        enemyBulletY = -1;
+                }
+
+                // Check player bullet collision with enemy
+                if (bulletX >= enemyX && bulletX <= enemyX + 2 &&
+                    bulletY >= enemyY && bulletY <= enemyY + 2)
+                {
+                    enemyLives--;
+                    bulletY = -1;
+                    if (enemyLives <= 0)
+                    {
+                        gameOver = true;
+                        winner = "Player";
+                    }
+                }
+
+                // Check enemy bullet collision with player
+                if (enemyBulletX >= playerPos && enemyBulletX <= playerPos + 2 &&
+                    enemyBulletY >= 19 && enemyBulletY <= 20)
+                {
+                    playerLives--;
+                    enemyBulletY = -1;
+                    if (playerLives <= 0)
+                    {
+                        gameOver = true;
+                        winner = "Enemy";
+                    }
+                }
+
+                // Draw
+                Console.Clear();
+
+                // Draw enemy health bar
+                Console.SetCursorPosition(enemyX, enemyY - 1);
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write("[");
+                for (int i = 0; i < enemyLives; i++)
+                    Console.Write("=");
+                for (int i = enemyLives; i < 3; i++)
+                    Console.Write(" ");
+                Console.Write("]");
+                Console.ResetColor();
+
+                // Draw enemy (3x3)
+                Console.SetCursorPosition(enemyX, enemyY);
+                Console.Write(" V ");
+                Console.SetCursorPosition(enemyX, enemyY + 1);
+                Console.Write("<O>");
+                Console.SetCursorPosition(enemyX, enemyY + 2);
+                Console.Write("/ \\");
+
+                // Draw player bullet
+                if (bulletY > -1)
+                {
+                    Console.SetCursorPosition(bulletX, bulletY);
+                    Console.Write("|");
+                }
+
+                // Draw enemy bullet
+                if (enemyBulletY > -1)
+                {
+                    Console.SetCursorPosition(enemyBulletX, enemyBulletY);
+                    Console.Write("*");
+                }
+
+                // Draw player (3x2)
+                Console.SetCursorPosition(playerPos, 19);
+                Console.Write(" ^ ");
+                Console.SetCursorPosition(playerPos, 20);
+                Console.Write("<M>");
+
+                // Draw player health bar
+                Console.SetCursorPosition(playerPos, 21);
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write("[");
+                for (int i = 0; i < playerLives; i++)
+                    Console.Write("=");
+                for (int i = playerLives; i < 3; i++)
+                    Console.Write(" ");
+                Console.Write("]");
+                Console.ResetColor();
+
+                // Draw HUD
+                Console.SetCursorPosition(0, 24);
+                Console.Write($"Enemy Health: {enemyLives}/3 | Arrow Keys=Move, Space=Shoot, ESC=Quit");
+
+                System.Threading.Thread.Sleep(100);
+            }
+
+            if (winner == "Player")
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("     🎉 YOU WIN! 🎉");
+                Console.WriteLine();
+                Console.WriteLine("     Victory is yours!");
+                Console.WriteLine("     Enemy destroyed!");
+            }
+            else if (winner == "Enemy")
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine("     💀 THE ENEMY WINS! 💀");
+                Console.WriteLine();
+                Console.WriteLine("     You were destroyed!");
+            } 
+
+            Console.ReadLine();
+
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.ResetColor();
+            Console.WriteLine();
+            Console.CursorVisible = true;
         }
 
 
