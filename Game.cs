@@ -306,7 +306,7 @@ namespace studioTeam
             //this is where the method will go for level 5
 
             //this is where the method will go for level 6
-
+            Level6();
 
         }
 
@@ -433,6 +433,14 @@ namespace studioTeam
         public static void Level6()
         {
             Console.WriteLine("                        Welcome to level 6... ");
+            Console.WriteLine("                        ");
+            Console.WriteLine("                    You have teleported to the year 3848 ");
+            Console.WriteLine("                     ");
+            Console.WriteLine("            You must now defeat the space invaders to return home! ");
+            Console.WriteLine("                     ");
+            Console.WriteLine("          Press any key to continue to Space Invaders... ");
+            Console.ReadKey();
+            Console.Clear();
 
             PlaySpaceInvaders();
         }
@@ -459,7 +467,7 @@ namespace studioTeam
 
             while (!gameOver)
             {
-                // Input
+
                 if (Console.KeyAvailable)
                 {
                     var key = Console.ReadKey(true).Key;
