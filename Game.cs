@@ -222,9 +222,9 @@ namespace studioTeam
 
             Random rand = new Random();
 
-            Console.WriteLine("WELCOME TO THE BATTLE TO DEATH!!!");
+            Console.WriteLine("                    WELCOME TO THE BATTLE TO DEATH!!!");
             Console.WriteLine("");
-            Console.WriteLine("Press any key to begin...");
+            Console.WriteLine("                    Press any key to begin...");
 
             Console.ReadKey();
 
@@ -239,7 +239,7 @@ namespace studioTeam
             Console.WriteLine(@"
                                          Welcome To Level 1!
                                       
-                Press any key to continue                        
+                                      Press any key to continue                        
                          ");
 
             UpdateHealthBars(PlayerHealth, ComputerHealth);
@@ -299,14 +299,14 @@ namespace studioTeam
             Console.SetCursorPosition(0, 6);
             if (playerWin)
             {
-                Console.WriteLine("             YOU Defeated The Challenger!!");
+                Console.WriteLine("                    YOU Defeated The Challenger!!");
             }
             else
             {
-                Console.WriteLine("            YOU LOSE!!!");
+                Console.WriteLine("                    YOU LOSE!!!");
             }
 
-            Console.WriteLine("\nPress any key to continue...");
+            Console.WriteLine("                    Press any key to continue...");
             Console.ReadKey();
 
         
@@ -405,20 +405,20 @@ namespace studioTeam
             Console.SetCursorPosition(0, 6);
             if (playerWin)
             {
-                Console.WriteLine("             YOU Defeated The Challenger!!");
+                Console.WriteLine("                    YOU Defeated The Challenger!!");
             }
             else
             {
-                Console.WriteLine("            YOU LOSE!!!");
+                Console.WriteLine("                    YOU LOSE!!!");
             }
 
-            Console.WriteLine("\nPress any key to continue...");
+            Console.WriteLine("                    Press any key to continue...");
             Console.ReadKey();
 
             ClearFromLine(6);
             Console.SetCursorPosition(0, 6);
-            Console.WriteLine("You Picked Up His Sharp New Sword \nYou Now Do 5 Extra Damage!");
-            Console.WriteLine("Press any key to continue to level 3...");
+            Console.WriteLine("                    You Picked Up His Sharp New Sword \nYou Now Do 5 Extra Damage!");
+            Console.WriteLine("                    Press any key to continue to level 3...");
         }
 
 
@@ -458,7 +458,211 @@ namespace studioTeam
         public static void Level5()
         {
             //Write your code for level 5 here
+
+            Random rand = new Random();
+
+            int playerHealth = 100;
+            int computerHealth = 150; // Increased difficulty
+            int chargeMeter = 0;
+            int playerPotions = 2;
+            bool blockNextHit = false;
+
+
+            {
+                Console.WriteLine("LEVEL 5: THE FINAL CHALLENGE!!!");
+                Console.WriteLine("Press any key to enter the arena...");
+                Console.ReadKey();
+                Console.Clear();
+
+                int turnCount = 0;
+                bool playerTurn = true;
+                bool playerWin = false;
+
+                while (playerHealth > 0 && computerHealth > 0)
+                {
+
+                    Console.WriteLine();
+
+                    if (playerTurn)
+                    {
+                        turnCount++;
+                        Console.WriteLine("Your Turn!");
+                        int damage = playersTurn();
+                        computerHealth -= damage;
+                        Console.WriteLine($"\nYou did {damage} damage!");
+                        chargeMeter = Math.Min(chargeMeter + 1, 3);
+                        Thread.Sleep(1000);
+                        playerTurn = false;
+                        playerWin = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Computer's Turn!");
+                        int damage = computersTurn();
+                        playerHealth -= damage;
+                        Console.WriteLine($"\nComputer did {damage} damage!");
+                        Thread.Sleep(1000);
+                        playerTurn = true;
+                        playerWin = false;
+                    }
+
+                    Console.Clear();
+
+                    int PlayerTurn()
+                    {
+                        Console.WriteLine("Choose your move:");
+                        Console.WriteLine("U = Uppercut (5-15), R = Roundhouse (10-20), S = Sword Slash (15-25)");
+                        Console.WriteLine("B = Block (Reduce next dmg), H = Use Health Potion");
+                        if (chargeMeter >= 3)
+                            Console.WriteLine("X = Special Move (30-50 damage)");
+
+                        char input = Char.ToUpper(Console.ReadKey().KeyChar);
+                        Console.WriteLine();
+
+                        switch (input)
+                        {
+                            case 'U': return RandomDamage(5, 15);
+                            case 'R': return RandomDamage(10, 20);
+                            case 'S': return RandomDamage(15, 25);
+                            case 'X':
+                                if (chargeMeter >= 3)
+                                {
+                                    Console.WriteLine("You unleash your SPECIAL MOVE!!");
+                                    chargeMeter = 0;
+                                    return RandomDamage(30, 50);
+                                }
+                                else
+                                {
+                                    Console.WriteLine("Special move not charged!");
+                                    return 0;
+                                }
+                            case 'B':
+                                Console.WriteLine("You brace yourself to block the next attack!");
+                                // Block sets a flag we simulate in enemy attack
+                                bool blockNextHit = true;
+                                return 0;
+                            case 'H':
+                                if (playerPotions > 0)
+                                {
+                                    int heal = rand.Next(20, 35);
+                                    playerHealth = Math.Min(playerHealth + heal, 100);
+                                    playerPotions--;
+                                    Console.WriteLine($"You drank a potion and restored {heal} HP! Potions left: {playerPotions}");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("No potions left!");
+                                }
+                                return 0;
+                            default:
+                                Console.WriteLine("Invalid move! You fumbled!");
+                                return 0;
+                        }
+                    }
+                    playerHitsComputer(playerHealth,computerHealth);
+
+
+
+                    int ComputerTurn()
+                    {
+                        Thread.Sleep(1500);
+
+                        int choice = rand.Next(0, 5);
+
+                        if (playerHealth < 30 && rand.Next(0, 2) == 0)
+                        {
+                            Console.WriteLine("Computer uses a strong attack while you're weak!");
+                            return FinalDamage(RandomDamage(20, 35));
+                        }
+
+                        switch (choice)
+                        {
+                            case 0:
+                                Console.WriteLine("Computer uses Uppercut!");
+                                return FinalDamage(RandomDamage(5, 15));
+                            case 1:
+                                Console.WriteLine("Computer uses Roundhouse!");
+                                return FinalDamage(RandomDamage(10, 20));
+                            case 2:
+                                Console.WriteLine("Computer uses Sword Slash!");
+                                return FinalDamage(RandomDamage(15, 25));
+                            case 3:
+                                if (rand.Next(0, 4) == 0)
+                                {
+                                    Console.WriteLine("Computer uses Special Move!");
+                                    return FinalDamage(RandomDamage(25, 45));
+                                }
+                                else
+                                    goto case 0;
+                            case 4:
+                                Console.WriteLine("Computer hesitates... You get lucky!");
+                                return 0;
+                            default:
+                                return 0;
+                        }
+                    }
+                    computerHitsPlayer(playerHealth,computerHealth);
+
+                    int FinalDamage(int rawDamage)
+                    {
+                        if (blockNextHit)
+                        {
+                            Console.WriteLine("You blocked the attack! Damage reduced.");
+                            blockNextHit = false;
+                            return rawDamage / 2;
+                        }
+
+                        // Critical hit chance
+                        if (rand.Next(0, 10) == 0)
+                        {
+                            Console.WriteLine("**CRITICAL HIT!!**");
+                            return (int)(rawDamage * 1.5);
+                        }
+
+                        return rawDamage;
+                    }
+
+                    int RandomDamage(int min, int max)
+                    {
+                        return rand.Next(min, max + 1);
+                    }
+
+                    void UpdateHealthBars()
+                    {
+                        Console.WriteLine($"Player Health:   [{new string('#', playerHealth / 10).PadRight(10)}] {playerHealth}/100");
+                        Console.WriteLine($"Computer Health: [{new string('#', computerHealth / 15).PadRight(10)}] {computerHealth}/150");
+                        Console.WriteLine($"Charge Meter: {chargeMeter}/3   Potions: {playerPotions}");
+                    }
+
+
+                    void EndGameSummary(bool playerWon, int turns)
+                    {
+                        Console.Clear();
+                        if (playerWon)
+                        {
+                            Console.WriteLine("🏆 YOU WIN LEVEL 5!!! 🏆");
+                            Console.WriteLine("You have proven your strength against the ultimate foe!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("💀 YOU HAVE BEEN DEFEATED... 💀");
+                            Console.WriteLine("The computer reigns supreme... for now.");
+                        }
+
+                        Console.WriteLine($"\n--- Battle Stats ---");
+                        Console.WriteLine($"Turns Taken: {turns}");
+                        Console.WriteLine($"Potions Used: {2 - playerPotions}");
+                        Console.WriteLine($"Charge Meter at End: {chargeMeter}/3");
+                        Console.WriteLine("\nPress any key to exit...");
+                        Console.ReadKey();
+
+                    }
+                }
+            }
+
         }
+        
+        
 
 
         //Paul
@@ -677,7 +881,8 @@ namespace studioTeam
             Console.WriteLine("                    Press U to uppercut, R to Roundhouse or S to Sword Slash");
             char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
             int damage = Moves(keyInput);
-            Console.Write($"You did {damage} damage!");
+            Console.Write($"\n                    You did {damage} damage!");
+            Thread.Sleep(1000);
             return damage;
         }
         public static int computersTurn()
@@ -1031,7 +1236,7 @@ namespace studioTeam
             Console.SetCursorPosition(0, 0);
             Console.ResetColor(); // this is the HUD, its 6  tall
             Console.WriteLine("========================================================================================================================");
-            Console.WriteLine($"Turn: {whosPlaying(turn)}                          insert game name here                                                         ");
+            Console.WriteLine($"Turn: {whosPlaying(turn)}                          guy who fights n shit                                               ");
             Console.WriteLine("========================================================================================================================");
             Console.Write("PLAYER HEALTH: ");
             DrawColoredBar(playerHealth, newHealth);
