@@ -6,6 +6,7 @@ namespace studioTeam
 {
     internal class Game
     {
+        const int HUDLines = 6; // Global Reserve top lines for HUD and health bars
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, Welcome to Black X Tech!");
@@ -228,75 +229,85 @@ namespace studioTeam
 
             Console.Clear();
             //Below is an example ive written to show how to call the method function for the moves
-            UpdateHealthBars(PlayerHealth, ComputerHealth); // Initial health bar display   -bw
-            Console.WriteLine("");
-            Console.WriteLine("Your Turn pick a move!!!");
-            Console.WriteLine("");
-            Console.WriteLine("Press U to uppercut, R to Roundhouse or S to Sword Slash");
-            char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
+            // Draw the HUD first
+            DrawHUD(PlayerHealth, ComputerHealth, playerTurn);
 
+            // Show starting messages under HUD
+            ClearFromLine(6);
+            Console.SetCursorPosition(0, 6);
+            Console.WriteLine(@"
+                                         Welcome To Level 1!
+                                      Press any key to continue                        
+                         ");
+
+            UpdateHealthBars(PlayerHealth, ComputerHealth);
+
+            // Get input
+            char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
             damage = Moves(keyInput);
             ComputerHealth -= damage;
-            Thread.Sleep(500);
-            Console.WriteLine($"\nYou did {damage} Damage!");
 
-            Console.WriteLine($"Computer Health is now {ComputerHealth}");
-
-
-            Thread.Sleep(2000);
-
-            Console.Clear();
-
+            // Main battle loop
             while (ComputerHealth > 0 && PlayerHealth > 0)
             {
-                //Console.WriteLine($"        Players Health: {PlayerHealth}            Computers Health: {ComputerHealth}");
+                // Update health bars only
+                Console.SetCursorPosition(0, 3);
                 UpdateHealthBars(PlayerHealth, ComputerHealth);
-                Console.WriteLine("");
+
+                // Clear animation/message area
+                ClearFromLine(6);
+                Console.SetCursorPosition(0, 6);
+
                 if (playerTurn)
                 {
-                    Console.WriteLine("Your Turn!");
+                    idle();
                     damage = playersTurn();
                     ComputerHealth -= damage;
-                    playerHitsComputer();
-                    Thread.Sleep(500);
-                    Console.WriteLine($"\nYou did {damage} Damage!");
-                    
-                    //Console.WriteLine($"Computer Health is now {ComputerHealth}");
-                    Thread.Sleep(500);
-                    Console.Clear();
+
+                    // Show animation
+                    ClearFromLine(6);
+                    Console.SetCursorPosition(0, 6);
+                    playerHitsComputer(PlayerHealth, ComputerHealth);
+                    Console.SetCursorPosition(0, 3);
+                    UpdateHealthBars(PlayerHealth, ComputerHealth);
                     playerTurn = false;
+                    whosPlaying(playerTurn);
                     playerWin = true;
                 }
                 else
                 {
-                    Console.WriteLine("Computer's Turn!");
+                    idle();
                     damage = computersTurn();
                     PlayerHealth -= damage;
-                    computerHitsPlayer();
-                    Thread.Sleep(500);
-                    Console.WriteLine($"\nComputer did {damage} Damage!");
-                    Console.WriteLine($"Your Health is now {PlayerHealth}");
-                    Thread.Sleep(500);
-                    Console.Clear();
+
+                    // Show animation
+                    ClearFromLine(6);
+                    Console.SetCursorPosition(0, 6);
+                    computerHitsPlayer(PlayerHealth, ComputerHealth);
+                    Console.SetCursorPosition(0, 3);
+                    UpdateHealthBars(PlayerHealth, ComputerHealth);
                     playerTurn = true;
+                    whosPlaying(playerTurn);
                     playerWin = false;
                 }
-
             }
+
+            // End of battle
+            ClearFromLine(6);
+            Console.SetCursorPosition(0, 6);
             if (playerWin)
             {
-                Console.WriteLine("             YOU WIN!!");
-
-                Console.WriteLine("\n          WELCOME TO THE NEXT LEVEL HAHAHAHA....");
-                Console.WriteLine("\n Press any key to continue...");
+                Console.WriteLine("             YOU Defeated The Challenger!!");
             }
             else
             {
                 Console.WriteLine("            YOU LOSE!!!");
             }
+
+            Console.WriteLine("\nPress any key to continue...");
             Console.ReadKey();
 
-
+        
             //this is where the method will go for level 2
             Level2(ComputerHealth, PlayerHealth, damage, playerTurn, playerWin);
             //this is where the method will go for level 3
@@ -313,82 +324,101 @@ namespace studioTeam
         public static void Level2(int ComputerHealth, int PlayerHealth, int damage, bool playerTurn, bool playerWin)
         {
             ComputerHealth = 100;
-            PlayerHealth = 100;
+            PlayerHealth = 125;
             damage = 0;
             playerTurn = true;
             playerWin = false;
-            Console.Clear();
-            HealthBar(PlayerHealth, ComputerHealth);
-            Console.WriteLine(@"            You Picked Up His ChestPlate!          
-                                                    +25 Health!
 
-                                            Your Pretty Good at Fighting, 
-                               ");
+            // Draw the HUD first
+            DrawHUD(PlayerHealth, ComputerHealth, playerTurn);
+
+            // Show starting messages under HUD
             ClearFromLine(6);
-            Console.WriteLine(@"
-                                                Welcome To Level 2!
-                                            A New Challenger Has Appeared!
-                                ");
-            UpdateHealthBars(PlayerHealth, ComputerHealth);
-            Console.WriteLine("");
-            Console.WriteLine("Your Turn pick a move!!!");
-            Console.WriteLine("");
-            Console.WriteLine("Press U to uppercut, R to Roundhouse or S to Sword Slash");
-            char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
+            Console.SetCursorPosition(0, 6);
+            Console.WriteLine(@"            You Picked Up His ChestPlate!          
+                                             +25 Health!
 
+                                     Your Pretty Good at Fighting");
+
+            ClearFromLine(6);
+            Console.SetCursorPosition(0, 6);
+            Console.WriteLine(@"
+                                         Welcome To Level 2!
+                                     A New Challenger Has Appeared!
+                         ");
+
+            UpdateHealthBars(PlayerHealth, ComputerHealth);
+
+            // Get input
+            char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
             damage = Moves(keyInput);
             ComputerHealth -= damage;
 
-            ClearFromLine(6);
-
+            // Main battle loop
             while (ComputerHealth > 0 && PlayerHealth > 0)
             {
-                // Move cursor to line 3 (0-indexed), overwrite health bars only
+                // Update health bars only
                 Console.SetCursorPosition(0, 3);
                 UpdateHealthBars(PlayerHealth, ComputerHealth);
-                // Clear the area *below* the health bars
+
+                // Clear animation/message area
                 ClearFromLine(6);
-                
-                Console.WriteLine("");
+                Console.SetCursorPosition(0, 6);
+
                 if (playerTurn)
                 {
-                    Console.WriteLine("Your Turn!");
+                   idle();
                     damage = playersTurn();
                     ComputerHealth -= damage;
-                    playerHitsComputer();
+
+                    // Show animation
                     ClearFromLine(6);
+                    Console.SetCursorPosition(0, 6);
+                    
+                    playerHitsComputer(PlayerHealth, ComputerHealth);
+
                     playerTurn = false;
+                    whosPlaying(playerTurn);
                     playerWin = true;
                 }
                 else
                 {
-                    Console.WriteLine("Computer's Turn!");
+                    idle();
                     damage = computersTurn();
                     PlayerHealth -= damage;
-                    computerHitsPlayer();
+
+                    // Show animation
                     ClearFromLine(6);
+                    Console.SetCursorPosition(0, 6);
+                    computerHitsPlayer(PlayerHealth, ComputerHealth);
+
                     playerTurn = true;
+                    whosPlaying(playerTurn);
                     playerWin = false;
                 }
-
             }
+
+            // End of battle
+            ClearFromLine(6);
+            Console.SetCursorPosition(0, 6);
             if (playerWin)
             {
-                Console.WriteLine("             YOU Defeated The Challanger         !!");
-
-                Console.WriteLine("\n Press any key to continue...");
+                Console.WriteLine("             YOU Defeated The Challenger!!");
             }
             else
             {
                 Console.WriteLine("            YOU LOSE!!!");
             }
+
+            Console.WriteLine("\nPress any key to continue...");
             Console.ReadKey();
 
-
-
-            Console.WriteLine("You Picked Up His Sharp New Sword \n You Now Do 5 Extra Damage!");
+            ClearFromLine(6);
+            Console.SetCursorPosition(0, 6);
+            Console.WriteLine("You Picked Up His Sharp New Sword \nYou Now Do 5 Extra Damage!");
             Console.WriteLine("Press any key to continue to level 3...");
         }
+
 
         public static void Level3(int ComputerHealth, int PlayerHealth, int damage, bool playerTurn, bool playerWin)
         {
@@ -625,7 +655,7 @@ namespace studioTeam
                 Console.WriteLine("     💀 THE ENEMY WINS! 💀");
                 Console.WriteLine();
                 Console.WriteLine("     You were destroyed!");
-            } 
+            }
 
             Console.ReadLine();
 
@@ -638,10 +668,10 @@ namespace studioTeam
 
         public static int playersTurn()
         {
-            Console.WriteLine("Press U to uppercut, R to Roundhouse or S to Sword Slash");
+            Console.WriteLine("                   \n                    Press U to uppercut, R to Roundhouse or S to Sword Slash");
             char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
             int damage = Moves(keyInput);
-
+            Console.WriteLine($"You did {damage} damage!");
             return damage;
         }
         public static int computersTurn()
@@ -651,6 +681,19 @@ namespace studioTeam
             int index = rand.Next(moves.Length);
             char computerMove = moves[index];
             int damage = Moves(computerMove);
+            switch (computerMove)
+            {
+                case 'U':
+                    Console.WriteLine($"Computer used Upper Cut and did {damage} damage!");
+                    break;
+                case 'R':
+                    Console.WriteLine($"Computer used Round House and did {damage} damage!");
+                    break;
+                case 'S':
+                    Console.WriteLine($"Computer used Sword Slash and did {damage} damage!");
+                    break;
+            }
+            
             return damage;
         }
 
@@ -680,12 +723,14 @@ namespace studioTeam
 
             }
             return damage;
+            
         }
 
 
-        public static void playerHitsComputer()
+        public static void playerHitsComputer(int PlayerHealth, int ComputerHealth)
         {
             ClearFromLine(6);
+            Console.SetCursorPosition(0, 6);
             Console.WriteLine("        . --- .                                                                                _____       ");
             Console.WriteLine("       /       \\                                                                              /     \\      ");
             Console.WriteLine("       | \\  /  |                                                                             |  o o  |       ");
@@ -705,6 +750,7 @@ namespace studioTeam
 
 
             ClearFromLine(6);
+            Console.SetCursorPosition(0, 6);
             Console.WriteLine("             . --- .                                                                             _____       ");
             Console.WriteLine("            /       \\                                                                           /     \\      ");
             Console.WriteLine("            | \\  /  |                                                                          |  o o  |       ");
@@ -724,6 +770,7 @@ namespace studioTeam
 
 
             ClearFromLine(6);
+            Console.SetCursorPosition(0, 6);
             Console.WriteLine("                      . --- .                                                                    _____       ");
             Console.WriteLine("                     /       \\                                                                  /     \\      ");
             Console.WriteLine("                     | \\  /  |                                                                 |  o o  |       ");
@@ -743,6 +790,7 @@ namespace studioTeam
 
 
             ClearFromLine(6);
+            Console.SetCursorPosition(0, 6);
             Console.WriteLine("                                 . --- .                                                         _____       ");
             Console.WriteLine("                                /       \\                                                       /     \\      ");
             Console.WriteLine("                                | \\  /  |                                                      |  o o  |       ");
@@ -762,6 +810,7 @@ namespace studioTeam
 
 
             ClearFromLine(6);
+            Console.SetCursorPosition(0, 6);
             Console.WriteLine("                                 . --- .           _____       ");
             Console.WriteLine("                                /       \\         /     \\      ");
             Console.WriteLine("                                | \\  /  |        |  o o  |       ");
@@ -782,6 +831,7 @@ namespace studioTeam
 
 
             ClearFromLine(6);
+            Console.SetCursorPosition(0, 6);
             Console.WriteLine("                                 . --- .                     '   '  '                       ");
             Console.WriteLine("                                /       \\               '    ~      ~                   ");
             Console.WriteLine("                                | \\  /  |             ~   ~     ' ~  '     ");
@@ -800,10 +850,10 @@ namespace studioTeam
             Thread.Sleep(300);
         }
 
-        public static void computerHitsPlayer()
+        public static void computerHitsPlayer(int PlayerHealth, int ComputerHealth)
         {
-
             ClearFromLine(6);
+            Console.SetCursorPosition(0, 6);
             Console.WriteLine("        . --- .                                                                                _____       ");
             Console.WriteLine("       /       \\                                                                              /     \\      ");
             Console.WriteLine("       | \\  /  |                                                                             |  o o  |       ");
@@ -823,6 +873,7 @@ namespace studioTeam
 
 
             ClearFromLine(6);
+            Console.SetCursorPosition(0, 6);
             Console.WriteLine("             . --- .                                                                             _____       ");
             Console.WriteLine("            /       \\                                                                           /     \\      ");
             Console.WriteLine("            | \\  /  |                                                                          |  o o  |       ");
@@ -842,6 +893,7 @@ namespace studioTeam
 
 
             ClearFromLine(6);
+            Console.SetCursorPosition(0, 6);
             Console.WriteLine("                      . --- .                                                                    _____       ");
             Console.WriteLine("                     /       \\                                                                  /     \\      ");
             Console.WriteLine("                     | \\  /  |                                                                 |  o o  |       ");
@@ -860,7 +912,8 @@ namespace studioTeam
             Thread.Sleep(300);
 
 
-            ClearFromLine(6 );
+            ClearFromLine(6);
+            Console.SetCursorPosition(0, 6);
             Console.WriteLine("                                 . --- .                                                         _____       ");
             Console.WriteLine("                                /       \\                                                       /     \\      ");
             Console.WriteLine("                                | \\  /  |                                                      |  o o  |       ");
@@ -880,6 +933,7 @@ namespace studioTeam
 
 
             ClearFromLine(6);
+            Console.SetCursorPosition(0, 6);
             Console.WriteLine("                                 . --- .            _____       ");
             Console.WriteLine("                                /       \\         /     \\      ");
             Console.WriteLine("                                | \\  /  |        |  o o  |       ");
@@ -899,6 +953,7 @@ namespace studioTeam
 
 
             ClearFromLine(6);
+            Console.SetCursorPosition(0, 6);
             Console.WriteLine("                                 . --- .            _____       ");
             Console.WriteLine("                                /       \\         /     \\      ");
             Console.WriteLine("                                | \\  /  |        |  o o  |       ");
@@ -917,6 +972,7 @@ namespace studioTeam
             Thread.Sleep(300);
 
             ClearFromLine(6);
+            Console.SetCursorPosition(0, 6);
             Console.WriteLine("                                 . --- .            _____       ");
             Console.WriteLine("                                /       \\         /     \\      ");
             Console.WriteLine("                                | \\  /  |        |  o o  |       ");
@@ -935,6 +991,7 @@ namespace studioTeam
             Thread.Sleep(300);
 
             ClearFromLine(6);
+            Console.SetCursorPosition(0, 6);
             Console.WriteLine("                                                    _____       ");
             Console.WriteLine("                                                   /     \\      ");
             Console.WriteLine("                               '   ' '            |  o o  |       ");
@@ -955,31 +1012,44 @@ namespace studioTeam
 
         }
 
-        //Health Bar Method haas color and is called with: HealthBar(PlayerHealth, ComputerHealth);
-        public static void HealthBar(int playerHealth, int computerHealth)
-        {
-            
-            // Keep health between 0 and 100
-            playerHealth = Math.Clamp(playerHealth, 0, 100);
-            computerHealth = Math.Clamp(computerHealth, 0, 100);
+        //Health Bar Method has color and is called with: HealthBar(PlayerHealth, ComputerHealth);
+        // ===== HUD + Console Display Methods =====
 
-            // Draw both bars
-            Console.Write("         PLAYER HEALTH:   ".PadRight(30));
+        static void DrawHUD(int playerHealth, int computerHealth, bool turn)
+        {
+            Console.SetCursorPosition(0, 0);
+            Console.ResetColor(); // this is the HUD, its 6  tall
+            Console.WriteLine("========================================================================================================================");
+            Console.WriteLine($"Turn: {whosPlaying(turn)}                          insert game name here                                                         ");
+            Console.WriteLine("========================================================================================================================");
+            Console.Write("PLAYER HEALTH: ");
             DrawColoredBar(playerHealth);
-
-            Console.Write("         COMPUTER HEALTH: ".PadRight(30));
+            Console.Write("COMPUTER HEALTH: ");
             DrawColoredBar(computerHealth);
+            Console.WriteLine("========================================================================================================================");
 
-            // Reset color after drawing
-            Console.ResetColor();
+            // Move cursor below HUD for animations or messages
+            Console.SetCursorPosition(0, HUDLines);
         }
-
-        private static void DrawColoredBar(int health)
+        static string whosPlaying(bool turn) //method for displaying whos turn it is
         {
-            int totalBars = 10;
-            int filledBars = (int)Math.Round(health / 10.0);
+            string whoTurn;
 
-            // Choose color based on the current health
+            if (turn)
+                whoTurn = "PLAYER";
+            else
+                whoTurn = "COMPUTER";
+            
+            return whoTurn;
+
+        }
+        static void DrawColoredBar(int health)
+        {
+            health = Math.Clamp(health, 0, 100);
+
+            int totalBars = 20; // Wider bar for readability
+            int filledBars = (int)Math.Round(health / 5.0);
+
             if (health > 60)
                 Console.ForegroundColor = ConsoleColor.Green;
             else if (health > 30)
@@ -987,29 +1057,74 @@ namespace studioTeam
             else
                 Console.ForegroundColor = ConsoleColor.Red;
 
-            // Build and display bar
-            string bar = "[" + new string('#', filledBars) + new string(' ', totalBars - filledBars) + $"] {health}%";
+            string bar = "[" + new string('#', filledBars) + new string(' ', totalBars - filledBars) + $"] {health,3}%";
             Console.WriteLine(bar);
-
-            // Reset color so other text isn’t tinted
             Console.ResetColor();
         }
 
-        public static void UpdateHealthBars(int playerHealth, int computerHealth)
+        static void UpdateHealthBars(int playerHealth, int computerHealth)
         {
-            // Move cursor to top left before redrawing
-            Console.SetCursorPosition(0, 0);
-            HealthBar(playerHealth, computerHealth);
+            // Save current cursor position
+            int currentCursorTop = Console.CursorTop;
+
+            // Draw player health on line 3
+            Console.SetCursorPosition(0, 3);
+            Console.Write("PLAYER HEALTH:   ");
+            DrawColoredBar(playerHealth);
+
+            // Draw computer health on line 4
+            Console.SetCursorPosition(0, 4);
+            Console.Write("COMPUTER HEALTH: ");
+            DrawColoredBar(computerHealth);
+
+            // Restore cursor position
+            Console.SetCursorPosition(0, currentCursorTop);
         }
-        public static void ClearFromLine(int startLine)
+
+
+        static void ClearBelowHUD()
         {
-            int currentLineCursor = Console.CursorTop;
+            ClearFromLine(HUDLines);
+            Console.SetCursorPosition(0, HUDLines);
+        }
+
+        static void ClearFromLine(int startLine)
+        {
+            // Always move to the start line first, so we never erase above it
             for (int i = startLine; i < Console.WindowHeight; i++)
             {
                 Console.SetCursorPosition(0, i);
                 Console.Write(new string(' ', Console.WindowWidth));
             }
-            Console.SetCursorPosition(0, currentLineCursor);
+
+            // Put cursor back at startLine ready to draw new frame
+            Console.SetCursorPosition(0, startLine);
+        }
+
+        static void idle() {
+            ClearFromLine(6);
+            Console.SetCursorPosition(0, 6);
+            Console.WriteLine("        . --- .                                                                                _____       ");
+            Console.WriteLine("       /       \\                                                                              /     \\      ");
+            Console.WriteLine("       | \\  /  |                                                                             |  o o  |       ");
+            Console.WriteLine("       |       |                                                                             |   ^   |       ");
+            Console.WriteLine("       |   ^   |                                                                              \\ \\_/ /      ");
+            Console.WriteLine("        \\  _  /    /                                                                           -----         ");
+            Console.WriteLine("         -----    /                                                                             |||       ");
+            Console.WriteLine("          | |    /                                                                             / | \\        ");
+            Console.WriteLine("         / | \\  /                                                                             /  |  \\          ");
+            Console.WriteLine("        /  |  \\/                                                                                 |        ");
+            Console.WriteLine("           |  /                                                                                 / \\   ");
+            Console.WriteLine("          / \\                                                                                  /   \\   ");
+            Console.WriteLine("         /   \\                                                                                /     \\   ");
+            Console.WriteLine("        /     \\                                                                              /       \\    ");
+            Console.WriteLine("-------------------------------------------------------------------------------------------------------------");
+        }
+        static void WriteBelowHUD(string message)
+        {
+            ClearBelowHUD();
+            Console.SetCursorPosition(0, HUDLines);
+            Console.WriteLine(message);
         }
     }
 }
