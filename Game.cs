@@ -446,10 +446,56 @@ namespace studioTeam
 
 
         //Caden
-        public static void Level4()
+        public static void Level4(int ComputerHealth, int PlayerHealth, int damage, bool playerTurn, bool playerWin)
         {
-            //Write your code for level 4 here
+            int target = 100;
+            int power = 0;
+            bool gameRunning = true;
+
+            Thread timerThread = new Thread(() =>
+            {
+                Thread.Sleep(10000);
+                gameRunning = false;
+            });
+
+            timerThread.Start();
+
+            while (gameRunning)
+            {
+                if (Console.KeyAvailable)
+                {
+                    ConsoleKeyInfo key = Console.ReadKey(true);
+                    if (key.Key == ConsoleKey.Spacebar)
+                    {
+                        power++;
+                        DrawPowerBar(power, target);
+                    }
+                }
+            }
+
+            Console.Clear();
+            Console.WriteLine("GAME OVER SCREEN");
+            Console.WriteLine();
+
+            Console.WriteLine(power >= target ? "YOU WIN!" : "YOU LOSE!");
+
+            void DrawPowerBar(int power, int target)
+            {
+                Console.Clear();
+                Console.WriteLine("Powerbar");
+
+                int barLength = 50;
+
+                int filled = (int)((double)power / target * barLength);
+                filled = Math.Min(filled, barLength);
+
+                string bar = "[" + new string('#', filled) + new string('-', barLength - filled) + "]";
+
+                Console.WriteLine(bar);
+                Console.WriteLine($"Might: {power}/{target}");
+            }
         }
+
 
 
         //Himanshu
