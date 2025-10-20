@@ -7,6 +7,7 @@ namespace studioTeam
     internal class Game
     {
         const int HUDLines = 6; // Global Reserve top lines for HUD and health bars
+        
         static void Main(string[] args)
         {
             Console.WriteLine("Hello, Welcome to Black X Tech!");
@@ -230,14 +231,15 @@ namespace studioTeam
             Console.Clear();
             //Below is an example ive written to show how to call the method function for the moves
             // Draw the HUD first
-            DrawHUD(PlayerHealth, ComputerHealth, playerTurn);
+            DrawHUD(PlayerHealth, ComputerHealth, playerTurn, PlayerHealth);
 
             // Show starting messages under HUD
             ClearFromLine(6);
             Console.SetCursorPosition(0, 6);
             Console.WriteLine(@"
                                          Welcome To Level 1!
-                                      Press any key to continue                        
+                                      
+                Press any key to continue                        
                          ");
 
             UpdateHealthBars(PlayerHealth, ComputerHealth);
@@ -330,7 +332,7 @@ namespace studioTeam
             playerWin = false;
 
             // Draw the HUD first
-            DrawHUD(PlayerHealth, ComputerHealth, playerTurn);
+            DrawHUD(PlayerHealth, ComputerHealth, playerTurn, PlayerHealth);
 
             // Show starting messages under HUD
             ClearFromLine(6);
@@ -668,10 +670,11 @@ namespace studioTeam
 
         public static int playersTurn()
         {
-            Console.WriteLine("                   \n                    Press U to uppercut, R to Roundhouse or S to Sword Slash");
+            Console.SetCursorPosition(0, 25);
+            Console.WriteLine("                    Press U to uppercut, R to Roundhouse or S to Sword Slash");
             char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
             int damage = Moves(keyInput);
-            Console.WriteLine($"You did {damage} damage!");
+            Console.Write($"You did {damage} damage!");
             return damage;
         }
         public static int computersTurn()
@@ -679,27 +682,32 @@ namespace studioTeam
             Random rand = new Random();
             char[] moves = { 'U', 'R', 'S' };
             int index = rand.Next(moves.Length);
+
             char computerMove = moves[index];
+            
             int damage = Moves(computerMove);
             switch (computerMove)
             {
                 case 'U':
-                    Console.WriteLine($"Computer used Upper Cut and did {damage} damage!");
+                    Console.SetCursorPosition(0, 25);
+                    Console.Write($"                    Computer used Upper Cut and did {damage} damage!");
                     break;
                 case 'R':
-                    Console.WriteLine($"Computer used Round House and did {damage} damage!");
+                    Console.SetCursorPosition(0, 25);
+                    Console.Write($"                    Computer used Round House and did {damage} damage!");
                     break;
                 case 'S':
-                    Console.WriteLine($"Computer used Sword Slash and did {damage} damage!");
+                    Console.SetCursorPosition(0, 25);
+                    Console.Write($"                    Computer used Sword Slash and did {damage} damage!");
                     break;
             }
-            
+            Thread.Sleep(1000);
             return damage;
         }
 
 
 
-        public static int Moves(char key, int newDamage = 0)
+        public static int Moves(char key, int newDamage = 0 )
         {
             int damage = 0;
             int damageBonus = newDamage;
@@ -1015,7 +1023,7 @@ namespace studioTeam
         //Health Bar Method has color and is called with: HealthBar(PlayerHealth, ComputerHealth);
         // ===== HUD + Console Display Methods =====
 
-        static void DrawHUD(int playerHealth, int computerHealth, bool turn)
+        static void DrawHUD(int playerHealth, int computerHealth, bool turn, int newHealth)
         {
             Console.SetCursorPosition(0, 0);
             Console.ResetColor(); // this is the HUD, its 6  tall
@@ -1023,7 +1031,7 @@ namespace studioTeam
             Console.WriteLine($"Turn: {whosPlaying(turn)}                          insert game name here                                                         ");
             Console.WriteLine("========================================================================================================================");
             Console.Write("PLAYER HEALTH: ");
-            DrawColoredBar(playerHealth);
+            DrawColoredBar(playerHealth, newHealth);
             Console.Write("COMPUTER HEALTH: ");
             DrawColoredBar(computerHealth);
             Console.WriteLine("========================================================================================================================");
@@ -1035,7 +1043,7 @@ namespace studioTeam
         {
             string whoTurn;
 
-            if (turn)
+            if (turn == true)
                 whoTurn = "PLAYER";
             else
                 whoTurn = "COMPUTER";
@@ -1043,7 +1051,7 @@ namespace studioTeam
             return whoTurn;
 
         }
-        static void DrawColoredBar(int health)
+        static void DrawColoredBar(int health, int newHealth = 100)
         {
             health = Math.Clamp(health, 0, 100);
 
@@ -1070,7 +1078,7 @@ namespace studioTeam
             // Draw player health on line 3
             Console.SetCursorPosition(0, 3);
             Console.Write("PLAYER HEALTH:   ");
-            DrawColoredBar(playerHealth);
+            DrawColoredBar(playerHealth, 125);
 
             // Draw computer health on line 4
             Console.SetCursorPosition(0, 4);
