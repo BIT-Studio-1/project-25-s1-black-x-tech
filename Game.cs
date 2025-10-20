@@ -14,7 +14,8 @@ namespace studioTeam
 
             //playerHitsComputer();
             //Console.ReadLine();
-            Level6();
+            //Level6();
+            
 
             // Frame 1
             Console.Clear();
@@ -222,9 +223,9 @@ namespace studioTeam
 
             Random rand = new Random();
 
-            Console.WriteLine("WELCOME TO THE BATTLE TO DEATH!!!");
+            Console.WriteLine("                    WELCOME TO THE BATTLE TO DEATH!!!");
             Console.WriteLine("");
-            Console.WriteLine("Press any key to begin...");
+            Console.WriteLine("                    Press any key to begin...");
 
             Console.ReadKey();
 
@@ -239,7 +240,7 @@ namespace studioTeam
             Console.WriteLine(@"
                                          Welcome To Level 1!
                                       
-                Press any key to continue                        
+                                      Press any key to continue                        
                          ");
 
             UpdateHealthBars(PlayerHealth, ComputerHealth);
@@ -299,14 +300,14 @@ namespace studioTeam
             Console.SetCursorPosition(0, 6);
             if (playerWin)
             {
-                Console.WriteLine("             YOU Defeated The Challenger!!");
+                Console.WriteLine("                    YOU Defeated The Challenger!!");
             }
             else
             {
-                Console.WriteLine("            YOU LOSE!!!");
+                Console.WriteLine("                    YOU LOSE!!!");
             }
 
-            Console.WriteLine("\nPress any key to continue...");
+            Console.WriteLine("                    Press any key to continue...");
             Console.ReadKey();
 
         
@@ -405,20 +406,20 @@ namespace studioTeam
             Console.SetCursorPosition(0, 6);
             if (playerWin)
             {
-                Console.WriteLine("             YOU Defeated The Challenger!!");
+                Console.WriteLine("                    YOU Defeated The Challenger!!");
             }
             else
             {
-                Console.WriteLine("            YOU LOSE!!!");
+                Console.WriteLine("                    YOU LOSE!!!");
             }
 
-            Console.WriteLine("\nPress any key to continue...");
+            Console.WriteLine("                    Press any key to continue...");
             Console.ReadKey();
 
             ClearFromLine(6);
             Console.SetCursorPosition(0, 6);
-            Console.WriteLine("You Picked Up His Sharp New Sword \nYou Now Do 5 Extra Damage!");
-            Console.WriteLine("Press any key to continue to level 3...");
+            Console.WriteLine("                    You Picked Up His Sharp New Sword \nYou Now Do 5 Extra Damage!");
+            Console.WriteLine("                    Press any key to continue to level 3...");
         }
 
 
@@ -677,7 +678,8 @@ namespace studioTeam
             Console.WriteLine("                    Press U to uppercut, R to Roundhouse or S to Sword Slash");
             char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
             int damage = Moves(keyInput);
-            Console.Write($"You did {damage} damage!");
+            Console.Write($"\n                    You did {damage} damage!");
+            Thread.Sleep(1000);
             return damage;
         }
         public static int computersTurn()
@@ -1031,7 +1033,7 @@ namespace studioTeam
             Console.SetCursorPosition(0, 0);
             Console.ResetColor(); // this is the HUD, its 6  tall
             Console.WriteLine("========================================================================================================================");
-            Console.WriteLine($"Turn: {whosPlaying(turn)}                          insert game name here                                                         ");
+            Console.WriteLine($"Turn: {whosPlaying(turn)}                          guy who fights n shit                                               ");
             Console.WriteLine("========================================================================================================================");
             Console.Write("PLAYER HEALTH: ");
             DrawColoredBar(playerHealth, newHealth);
