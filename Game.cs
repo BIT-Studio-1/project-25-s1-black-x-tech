@@ -14,7 +14,7 @@ namespace studioTeam
 
             //playerHitsComputer();
             //Console.ReadLine();
-            Level6();
+            //Level6();
 
             // Frame 1
             Console.Clear();
