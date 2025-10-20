@@ -639,7 +639,7 @@ namespace studioTeam
                 Console.SetCursorPosition(0, 24);
                 Console.Write($"Enemy Health: {enemyLives}/3 | Arrow Keys=Move, Space=Shoot");
 
-                System.Threading.Thread.Sleep(300);
+                System.Threading.Thread.Sleep(100);
             }
 
             if (winner == "Player")
