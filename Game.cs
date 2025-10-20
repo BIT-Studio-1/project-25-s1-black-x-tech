@@ -724,6 +724,7 @@ namespace studioTeam
         //Paul
         public static void Level6()
         {
+            Console.Clear();
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("                        Welcome to level 6... ");
             Console.WriteLine("                        ");
