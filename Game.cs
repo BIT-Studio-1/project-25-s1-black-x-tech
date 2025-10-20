@@ -657,6 +657,8 @@ namespace studioTeam
                                 return 0;
                         }
                     }
+                    ClearFromLine(6);
+                    Console.SetCursorPosition(0, 6);
                     computerHitsPlayer(playerHealth,computerHealth);
 
                     int FinalDamage(int rawDamage)
