@@ -9,11 +9,11 @@ namespace studioTeam
         const int HUDLines = 6; // Global Reserve top lines for HUD and health bars
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, Welcome to Black X Tech!");
+            //Console.WriteLine("Hello, Welcome to Black X Tech!");
 
             //playerHitsComputer();
             //Console.ReadLine();
-            //Level6();   
+            Level6();
 
             // Frame 1
             Console.Clear();
@@ -462,6 +462,7 @@ namespace studioTeam
         //Paul
         public static void Level6()
         {
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("                        Welcome to level 6... ");
             Console.WriteLine("                        ");
             Console.WriteLine("                    You have teleported to the year 3848 ");
@@ -636,13 +637,14 @@ namespace studioTeam
 
                 // Draw HUD
                 Console.SetCursorPosition(0, 24);
-                Console.Write($"Enemy Health: {enemyLives}/3 | Arrow Keys=Move, Space=Shoot, ESC=Quit");
+                Console.Write($"Enemy Health: {enemyLives}/3 | Arrow Keys=Move, Space=Shoot");
 
-                System.Threading.Thread.Sleep(100);
+                System.Threading.Thread.Sleep(300);
             }
 
             if (winner == "Player")
             {
+                Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("     🎉 YOU WIN! 🎉");
                 Console.WriteLine();
@@ -651,6 +653,7 @@ namespace studioTeam
             }
             else if (winner == "Enemy")
             {
+                Console.Clear();
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("     💀 THE ENEMY WINS! 💀");
                 Console.WriteLine();
