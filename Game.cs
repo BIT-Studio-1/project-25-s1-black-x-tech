@@ -14,7 +14,7 @@ namespace studioTeam
 
             //playerHitsComputer();
             //Console.ReadLine();
-            //Level5();
+            Level5();
             
 
             // Frame 1
@@ -458,6 +458,7 @@ namespace studioTeam
         //Himanshu
         public static void Level5()
         {
+            
             //Write your code for level 5 here
 
             Random rand = new Random();
@@ -468,8 +469,9 @@ namespace studioTeam
             int playerPotions = 2;
             bool blockNextHit = false;
 
-
+            
             {
+                
                 Console.WriteLine("LEVEL 5: THE FINAL CHALLENGE!!!");
                 Console.WriteLine("Press any key to enter the arena...");
                 Console.ReadKey();
@@ -560,7 +562,10 @@ namespace studioTeam
                                 return 0;
                         }
                     }
-                    playerHitsComputer(playerHealth,computerHealth);
+                    ClearFromLine(6);
+                    Console.SetCursorPosition(0, 6);
+
+                    playerHitsComputer(playerHealth, computerHealth);
 
 
 
