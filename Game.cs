@@ -315,7 +315,7 @@ namespace studioTeam
             //this is where the method will go for level 3
             Level3(ComputerHealth, PlayerHealth, damage, playerTurn, playerWin);
             //this is where the method will go for level 4
-
+            Level4(damage, ComputerHealth);
             //this is where the method will go for level 5
 
             //this is where the method will go for level 6
@@ -448,10 +448,8 @@ namespace studioTeam
 
 
         //Caden
-        public static void Level4(int ComputerHealth, int PlayerHealth, int damage, bool playerTurn, bool playerWin)
+        public static void Level4(int ComputerHealth, int damage)
         {
-            int target = 100;
-            int power = 0;
             bool gameRunning = true;
 
             Thread timerThread = new Thread(() =>
@@ -469,8 +467,8 @@ namespace studioTeam
                     ConsoleKeyInfo key = Console.ReadKey(true);
                     if (key.Key == ConsoleKey.Spacebar)
                     {
-                        power++;
-                        DrawPowerBar(power, target);
+                        damage++;
+                        DrawPowerBar(damage, ComputerHealth);
                     }
                 }
             }
@@ -479,24 +477,25 @@ namespace studioTeam
             Console.WriteLine("GAME OVER SCREEN");
             Console.WriteLine();
 
-            Console.WriteLine(power >= target ? "YOU WIN!" : "YOU LOSE!");
+            Console.WriteLine(ComputerHealth >= damage ? "YOU WIN!" : "YOU LOSE!");
 
-            void DrawPowerBar(int power, int target)
+            void DrawPowerBar(int damage, int ComputerHealth)
             {
                 Console.Clear();
                 Console.WriteLine("Powerbar");
 
                 int barLength = 50;
 
-                int filled = (int)((double)power / target * barLength);
+                int filled = (int)((double)damage / ComputerHealth * barLength);
                 filled = Math.Min(filled, barLength);
 
                 string bar = "[" + new string('#', filled) + new string('-', barLength - filled) + "]";
 
                 Console.WriteLine(bar);
-                Console.WriteLine($"Might: {power}/{target}");
+                Console.WriteLine($"Might: {damage}/{ComputerHealth}");
             }
         }
+
 
 
 
