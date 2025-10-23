@@ -11,22 +11,22 @@
             do
             {
                 Console.Clear();
-                Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]");
+                Console.WriteLine("______           _        _                 _____");
                 Thread.Sleep(100);
                 Console.Clear();
-                Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]\r\n| _   _ ||  o  ||  _  |    |  |  |  | |  | |      ||  |  |    |  o  |    |  |  ||     ||  D  )(   \\_  /  [_ \r\n|");
+                Console.WriteLine("______           _        _                 _____                      \r\n|  _  \\         | |      (_)               |  __ \\");
                 Thread.Sleep(100);
                 Console.Clear();
-                Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]\r\n| _   _ ||  o  ||  _  |    |  |  |  | |  | |      ||  |  |    |  o  |    |  |  ||     ||  D  )(   \\_  /  [_ \r\n|  \\_/  ||     ||  |  |    |  |  |  | |  | |_|  |_||  _  |    |     |    |  _  ||  O  ||    /  \\__  ||    _]\r\n");
+                Console.WriteLine("______           _        _                 _____                      \r\n|  _  \\         | |      (_)               |  __ \\                     \r\n| | | |_   _  __| | ___   _ _ __     __ _  | |  \\/ __ _ _ __ ___   ___ \r\n| | | | | | |/ _` |/ _ \\ | | '_ \\   / _` | | | __ / _` | '_ ` _ \\ / _ \\\r\n");
                 Thread.Sleep(100);
                 Console.Clear();
-                Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]\r\n| _   _ ||  o  ||  _  |    |  |  |  | |  | |      ||  |  |    |  o  |    |  |  ||     ||  D  )(   \\_  /  [_ \r\n|  \\_/  ||     ||  |  |    |  |  |  | |  | |_|  |_||  _  |    |     |    |  _  ||  O  ||    /  \\__  ||    _]\r\n|   |   ||  _  ||  |  |    |  `  '  | |  |   |  |  |  |  |    |  _  |    |  |  ||     ||    \\  /  \\ ||                                                                                                            ");
+                Console.WriteLine("______           _        _                 _____                      \r\n|  _  \\         | |      (_)               |  __ \\                     \r\n| | | |_   _  __| | ___   _ _ __     __ _  | |  \\/ __ _ _ __ ___   ___ \r\n| | | | | | |/ _` |/ _ \\ | | '_ \\   / _` | | | __ / _` | '_ ` _ \\ / _ \\\r\n");
                 Thread.Sleep(100);
                 Console.Clear();
-                Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]\r\n| _   _ ||  o  ||  _  |    |  |  |  | |  | |      ||  |  |    |  o  |    |  |  ||     ||  D  )(   \\_  /  [_ \r\n|  \\_/  ||     ||  |  |    |  |  |  | |  | |_|  |_||  _  |    |     |    |  _  ||  O  ||    /  \\__  ||    _]\r\n|   |   ||  _  ||  |  |    |  `  '  | |  |   |  |  |  |  |    |  _  |    |  |  ||     ||    \\  /  \\ ||   [_ \r\n|   |   ||  |  ||  |  |     \\      /  |  |   |  |  |  |  |    |  |  |    |  |  ||     ||  .  \\ \\    |");
+                Console.WriteLine("______           _        _                 _____                      \r\n|  _  \\         | |      (_)               |  __ \\                     \r\n| | | |_   _  __| | ___   _ _ __     __ _  | |  \\/ __ _ _ __ ___   ___ \r\n| | | | | | |/ _` |/ _ \\ | | '_ \\   / _` | | | __ / _` | '_ ` _ \\ / _ \\\r\n| |/ /| |_| | (_| |  __/ | | | | | | (_| | | |_\\ \\ (_| | | | | | |  __/\r\n");
                 Thread.Sleep(100);
                 Console.Clear();
-                Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]\r\n| _   _ ||  o  ||  _  |    |  |  |  | |  | |      ||  |  |    |  o  |    |  |  ||     ||  D  )(   \\_  /  [_ \r\n|  \\_/  ||     ||  |  |    |  |  |  | |  | |_|  |_||  _  |    |     |    |  _  ||  O  ||    /  \\__  ||    _]\r\n|   |   ||  _  ||  |  |    |  `  '  | |  |   |  |  |  |  |    |  _  |    |  |  ||     ||    \\  /  \\ ||   [_ \r\n|   |   ||  |  ||  |  |     \\      /  |  |   |  |  |  |  |    |  |  |    |  |  ||     ||  .  \\ \\    ||     |\r\n|___|___||__|__||__|__|      \\_/\\_/  |____|  |__|  |__|__|    |__|__|    |__|__| \\___/ |__|\\_|  \\___||_____|\r\n                                                                                                            ");
+                Console.WriteLine("______           _        _                 _____                      \r\n|  _  \\         | |      (_)               |  __ \\                     \r\n| | | |_   _  __| | ___   _ _ __     __ _  | |  \\/ __ _ _ __ ___   ___ \r\n| | | | | | |/ _` |/ _ \\ | | '_ \\   / _` | | | __ / _` | '_ ` _ \\ / _ \\\r\n| |/ /| |_| | (_| |  __/ | | | | | | (_| | | |_\\ \\ (_| | | | | | |  __/\r\n|___/  \\__,_|\\__,_|\\___| |_|_| |_|  \\__,_|  \\____/\\__,_|_| |_| |_|\\___|\r\n");
                 ClearFromLine(20);
                 Console.SetCursorPosition(0, 10);
                 Console.WriteLine(@"                                M e n u :
@@ -580,17 +580,19 @@
             }
             Console.Clear();
         }
+
         public static void Level4()
-            {
-             int ComputerHealth = 100, PlayerHealth = 100, damage = 0;
-             bool playerTurn = true, playerWin = false;
-             int target = 100;
-             int power = 0;
-             bool gameRunning = true;
+        {
+            int ComputerHealth = 100, damage = 0;
+            bool gameRunning = true;
+
+            Console.Clear();
+            Console.WriteLine("Level 4: Test Your Fight!");
+            Console.WriteLine("Press SPACE repeatedly to pierce through your enemy's armour!");
 
             Thread timerThread = new Thread(() =>
             {
-                Thread.Sleep(10000);
+                Thread.Sleep(20000);
                 gameRunning = false;
             });
 
@@ -603,8 +605,13 @@
                     ConsoleKeyInfo key = Console.ReadKey(true);
                     if (key.Key == ConsoleKey.Spacebar)
                     {
-                        power++;
-                        DrawPowerBar(power, target);
+                        damage++;
+                        DrawPowerBar(damage, ComputerHealth);
+
+                        if (damage >= ComputerHealth)  // Player breaks through armor early
+                        {
+                            gameRunning = false;
+                        }
                     }
                 }
             }
@@ -613,24 +620,33 @@
             Console.WriteLine("GAME OVER SCREEN");
             Console.WriteLine();
 
-            Console.WriteLine(power >= target ? "YOU WIN!" : "YOU LOSE!");
+            if (damage >= ComputerHealth)
+                Console.WriteLine("YOU WIN!");
+            else
+                Console.WriteLine("YOU LOSE!");
 
-            void DrawPowerBar(int power, int target)
+            Console.WriteLine();
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey(true);  // Wait for player to press a key before continuing
+
+            void DrawPowerBar(int damage, int ComputerHealth)
             {
                 Console.Clear();
                 Console.WriteLine("Powerbar");
 
                 int barLength = 50;
 
-                int filled = (int)((double)power / target * barLength);
+                int filled = (int)((double)damage / ComputerHealth * barLength);
                 filled = Math.Min(filled, barLength);
 
                 string bar = "[" + new string('#', filled) + new string('-', barLength - filled) + "]";
 
                 Console.WriteLine(bar);
-                Console.WriteLine($"Might: {power}/{target}");
+                Console.WriteLine($"Might: {damage}/{ComputerHealth}");
             }
         }
+
+
         public static void Level5()
         {
             Random rand = new Random();

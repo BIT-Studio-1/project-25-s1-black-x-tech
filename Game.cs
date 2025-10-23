@@ -7,8 +7,8 @@ namespace studioTeam
     internal class Game
     {
         const int HUDLines = 6; // Global Reserve top lines for HUD and health bars
-        
-        static void Main(string[] args)
+
+        public void Run()
         {
             //Console.WriteLine("Hello, Welcome to Black X Tech!");
 
@@ -23,22 +23,22 @@ namespace studioTeam
 
             // Frame 1
             Console.Clear();
-            Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]");
+            Console.WriteLine("______           _        _                 _____");
             Thread.Sleep(100);
             Console.Clear();
-            Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]\r\n| _   _ ||  o  ||  _  |    |  |  |  | |  | |      ||  |  |    |  o  |    |  |  ||     ||  D  )(   \\_  /  [_ \r\n|");
+            Console.WriteLine("______           _        _                 _____                      \r\n|  _  \\         | |      (_)               |  __ \\");
             Thread.Sleep(100);
             Console.Clear();
-            Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]\r\n| _   _ ||  o  ||  _  |    |  |  |  | |  | |      ||  |  |    |  o  |    |  |  ||     ||  D  )(   \\_  /  [_ \r\n|  \\_/  ||     ||  |  |    |  |  |  | |  | |_|  |_||  _  |    |     |    |  _  ||  O  ||    /  \\__  ||    _]\r\n");
+            Console.WriteLine("______           _        _                 _____                      \r\n|  _  \\         | |      (_)               |  __ \\                     \r\n| | | |_   _  __| | ___   _ _ __     __ _  | |  \\/ __ _ _ __ ___   ___ \r\n| | | | | | |/ _` |/ _ \\ | | '_ \\   / _` | | | __ / _` | '_ ` _ \\ / _ \\\r\n");
             Thread.Sleep(100);
             Console.Clear();
-            Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]\r\n| _   _ ||  o  ||  _  |    |  |  |  | |  | |      ||  |  |    |  o  |    |  |  ||     ||  D  )(   \\_  /  [_ \r\n|  \\_/  ||     ||  |  |    |  |  |  | |  | |_|  |_||  _  |    |     |    |  _  ||  O  ||    /  \\__  ||    _]\r\n|   |   ||  _  ||  |  |    |  `  '  | |  |   |  |  |  |  |    |  _  |    |  |  ||     ||    \\  /  \\ ||                                                                                                            ");
+            Console.WriteLine("______           _        _                 _____                      \r\n|  _  \\         | |      (_)               |  __ \\                     \r\n| | | |_   _  __| | ___   _ _ __     __ _  | |  \\/ __ _ _ __ ___   ___ \r\n| | | | | | |/ _` |/ _ \\ | | '_ \\   / _` | | | __ / _` | '_ ` _ \\ / _ \\\r\n");
             Thread.Sleep(100);
             Console.Clear();
-            Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]\r\n| _   _ ||  o  ||  _  |    |  |  |  | |  | |      ||  |  |    |  o  |    |  |  ||     ||  D  )(   \\_  /  [_ \r\n|  \\_/  ||     ||  |  |    |  |  |  | |  | |_|  |_||  _  |    |     |    |  _  ||  O  ||    /  \\__  ||    _]\r\n|   |   ||  _  ||  |  |    |  `  '  | |  |   |  |  |  |  |    |  _  |    |  |  ||     ||    \\  /  \\ ||   [_ \r\n|   |   ||  |  ||  |  |     \\      /  |  |   |  |  |  |  |    |  |  |    |  |  ||     ||  .  \\ \\    |");
+            Console.WriteLine("______           _        _                 _____                      \r\n|  _  \\         | |      (_)               |  __ \\                     \r\n| | | |_   _  __| | ___   _ _ __     __ _  | |  \\/ __ _ _ __ ___   ___ \r\n| | | | | | |/ _` |/ _ \\ | | '_ \\   / _` | | | __ / _` | '_ ` _ \\ / _ \\\r\n| |/ /| |_| | (_| |  __/ | | | | | | (_| | | |_\\ \\ (_| | | | | | |  __/\r\n");
             Thread.Sleep(100);
             Console.Clear();
-            Console.WriteLine(" ___ ___   ____  ____       __    __  ____  ______  __ __       ____      __ __   ___   ____    _____   ___ \r\n|   |   | /    ||    \\     |  |__|  ||    ||      ||  |  |     /    |    |  |  | /   \\ |    \\  / ___/  /  _]\r\n| _   _ ||  o  ||  _  |    |  |  |  | |  | |      ||  |  |    |  o  |    |  |  ||     ||  D  )(   \\_  /  [_ \r\n|  \\_/  ||     ||  |  |    |  |  |  | |  | |_|  |_||  _  |    |     |    |  _  ||  O  ||    /  \\__  ||    _]\r\n|   |   ||  _  ||  |  |    |  `  '  | |  |   |  |  |  |  |    |  _  |    |  |  ||     ||    \\  /  \\ ||   [_ \r\n|   |   ||  |  ||  |  |     \\      /  |  |   |  |  |  |  |    |  |  |    |  |  ||     ||  .  \\ \\    ||     |\r\n|___|___||__|__||__|__|      \\_/\\_/  |____|  |__|  |__|__|    |__|__|    |__|__| \\___/ |__|\\_|  \\___||_____|\r\n                                                                                                            ");
+            Console.WriteLine("______           _        _                 _____                      \r\n|  _  \\         | |      (_)               |  __ \\                     \r\n| | | |_   _  __| | ___   _ _ __     __ _  | |  \\/ __ _ _ __ ___   ___ \r\n| | | | | | |/ _` |/ _ \\ | | '_ \\   / _` | | | __ / _` | '_ ` _ \\ / _ \\\r\n| |/ /| |_| | (_| |  __/ | | | | | | (_| | | |_\\ \\ (_| | | | | | |  __/\r\n|___/  \\__,_|\\__,_|\\___| |_|_| |_|  \\__,_|  \\____/\\__,_|_| |_| |_|\\___|\r\n");
 
 
 
@@ -441,18 +441,20 @@ namespace studioTeam
             Console.WriteLine("Press U to uppercut, R to Roundhouse or S to Sword Slash");
             char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
             damage = Moves(keyInput, newDamage); // like this, passing in the newDamage variable so it gets added to the damage calculation in the moves method
-            ComputerHealth -= damage;
+            ComputerHealth -= (damage+newDamage);
 
 
             //continue the rest of level 3 code here, similar to level 1 and 2 but make sure to call Moves with the newDamage variable :) -bw
-            Console.WriteLine("           You Sharpened       ");
+            Console.WriteLine("           You Sharpened Your Sword!      ");
+            Console.WriteLine("Attacks Are Now Stronger And Have Guaranteed Damage! ");
+            Console.ReadLine();
             Console.WriteLine("          Finally! A Worthy Opponent!   ");
-            Console.WriteLine("     Use Your New Sword To Slay The Challenger!");
-            Console.WriteLine("");
+            Console.WriteLine("     Use Your Newly Sharpened Sword To Slay The Challenger!");
+            Console.ReadLine();
         }
 
 
-        //Caden
+        
         public static void Level4(int ComputerHealth, int damage)
         {
             bool gameRunning = true;
