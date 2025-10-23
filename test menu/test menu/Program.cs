@@ -649,212 +649,85 @@
 
         public static void Level5()
         {
+            int ComputerHealth = 100, PlayerHealth = 105, damage = 0;
+            bool playerTurn = true, playerWin = false;
+
             Random rand = new Random();
+            Console.Clear();
+            // Draw the HUD first
+            DrawHUD(PlayerHealth, ComputerHealth, playerTurn, PlayerHealth);
 
-            int playerHealth = 100;
-            int computerHealth = 150; // Increased difficulty
-            int chargeMeter = 0;
-            int playerPotions = 2;
-            bool blockNextHit = false;
+            // Show starting messages under HUD
+            ClearFromLine(6);
+            Console.SetCursorPosition(0, 6);
+            Console.WriteLine(@"
+                                         Welcome To Level 5!
+                                      
+                                      Press any key to continue                        
+                         ");
 
+            UpdateHealthBars(PlayerHealth, ComputerHealth, playerTurn);
 
+            // Get input
+            char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
+            damage = Moves(keyInput);
+            ComputerHealth -= damage;
+
+            // Main battle loop
+            while (ComputerHealth > 0 && PlayerHealth > 0)
             {
+                // Update health bars only
+                Console.SetCursorPosition(0, 3);
+                UpdateHealthBars(PlayerHealth, ComputerHealth, playerTurn);
 
-                Console.WriteLine("LEVEL 5: THE FINAL CHALLENGE!!!");
-                Console.WriteLine("Press any key to enter the arena...");
-                Console.ReadKey();
-                Console.Clear();
+                // Clear animation/message area
+                ClearFromLine(6);
+                Console.SetCursorPosition(0, 6);
 
-                int turnCount = 0;
-                bool playerTurn = true;
-                bool playerWin = false;
-
-                while (playerHealth > 0 && computerHealth > 0)
+                if (playerTurn)
                 {
+                    idle();
+                    damage = playersTurn();
+                    ComputerHealth -= damage;
 
-                    Console.WriteLine();
-
-                    if (playerTurn)
-                    {
-                        turnCount++;
-                        Console.WriteLine("Your Turn!");
-                        int damage = playersTurn();
-                        computerHealth -= damage;
-                        Console.WriteLine($"\nYou did {damage} damage!");
-                        chargeMeter = Math.Min(chargeMeter + 1, 3);
-                        Thread.Sleep(1000);
-                        playerTurn = false;
-                        playerWin = true;
-                    }
-                    else
-                    {
-                        Console.WriteLine("Computer's Turn!");
-                        int damage = computersTurn();
-                        playerHealth -= damage;
-                        Console.WriteLine($"\nComputer did {damage} damage!");
-                        Thread.Sleep(1000);
-                        playerTurn = true;
-                        playerWin = false;
-                    }
-
-                    Console.Clear();
-
-                    int PlayerTurn()
-                    {
-                        Console.WriteLine("Choose your move:");
-                        Console.WriteLine("U = Uppercut (5-15), R = Roundhouse (10-20), S = Sword Slash (15-25)");
-                        Console.WriteLine("B = Block (Reduce next dmg), H = Use Health Potion");
-                        if (chargeMeter >= 3)
-                            Console.WriteLine("X = Special Move (30-50 damage)");
-
-                        char input = Char.ToUpper(Console.ReadKey().KeyChar);
-                        Console.WriteLine();
-
-                        switch (input)
-                        {
-                            case 'U': return RandomDamage(5, 15);
-                            case 'R': return RandomDamage(10, 20);
-                            case 'S': return RandomDamage(15, 25);
-                            case 'X':
-                                if (chargeMeter >= 3)
-                                {
-                                    Console.WriteLine("You unleash your SPECIAL MOVE!!");
-                                    chargeMeter = 0;
-                                    return RandomDamage(30, 50);
-                                }
-                                else
-                                {
-                                    Console.WriteLine("Special move not charged!");
-                                    return 0;
-                                }
-                            case 'B':
-                                Console.WriteLine("You brace yourself to block the next attack!");
-                                // Block sets a flag we simulate in enemy attack
-                                bool blockNextHit = true;
-                                return 0;
-                            case 'H':
-                                if (playerPotions > 0)
-                                {
-                                    int heal = rand.Next(20, 35);
-                                    playerHealth = Math.Min(playerHealth + heal, 100);
-                                    playerPotions--;
-                                    Console.WriteLine($"You drank a potion and restored {heal} HP! Potions left: {playerPotions}");
-                                }
-                                else
-                                {
-                                    Console.WriteLine("No potions left!");
-                                }
-                                return 0;
-                            default:
-                                Console.WriteLine("Invalid move! You fumbled!");
-                                return 0;
-                        }
-                    }
+                    // Show animation
                     ClearFromLine(6);
                     Console.SetCursorPosition(0, 6);
+                    playerHitsComputer(PlayerHealth, ComputerHealth);
+                    Console.SetCursorPosition(0, 3);
+                    UpdateHealthBars(PlayerHealth, ComputerHealth, playerTurn);
+                    playerTurn = false;
+                    playerWin = true;
+                }
+                else
+                {
+                    idle();
+                    damage = computersTurn();
+                    PlayerHealth -= damage;
 
-                    playerHitsComputer(playerHealth, computerHealth);
-
-
-
-                    int ComputerTurn()
-                    {
-                        Thread.Sleep(1500);
-
-                        int choice = rand.Next(0, 5);
-
-                        if (playerHealth < 30 && rand.Next(0, 2) == 0)
-                        {
-                            Console.WriteLine("Computer uses a strong attack while you're weak!");
-                            return FinalDamage(RandomDamage(20, 35));
-                        }
-
-                        switch (choice)
-                        {
-                            case 0:
-                                Console.WriteLine("Computer uses Uppercut!");
-                                return FinalDamage(RandomDamage(5, 15));
-                            case 1:
-                                Console.WriteLine("Computer uses Roundhouse!");
-                                return FinalDamage(RandomDamage(10, 20));
-                            case 2:
-                                Console.WriteLine("Computer uses Sword Slash!");
-                                return FinalDamage(RandomDamage(15, 25));
-                            case 3:
-                                if (rand.Next(0, 4) == 0)
-                                {
-                                    Console.WriteLine("Computer uses Special Move!");
-                                    return FinalDamage(RandomDamage(25, 45));
-                                }
-                                else
-                                    goto case 0;
-                            case 4:
-                                Console.WriteLine("Computer hesitates... You get lucky!");
-                                return 0;
-                            default:
-                                return 0;
-                        }
-                    }
+                    // Show animation
                     ClearFromLine(6);
                     Console.SetCursorPosition(0, 6);
-                    computerHitsPlayer(playerHealth, computerHealth);
-
-                    int FinalDamage(int rawDamage)
-                    {
-                        if (blockNextHit)
-                        {
-                            Console.WriteLine("You blocked the attack! Damage reduced.");
-                            blockNextHit = false;
-                            return rawDamage / 2;
-                        }
-
-                        // Critical hit chance
-                        if (rand.Next(0, 10) == 0)
-                        {
-                            Console.WriteLine("**CRITICAL HIT!!**");
-                            return (int)(rawDamage * 1.5);
-                        }
-
-                        return rawDamage;
-                    }
-
-                    int RandomDamage(int min, int max)
-                    {
-                        return rand.Next(min, max + 1);
-                    }
-
-                    void UpdateHealthBars()
-                    {
-                        Console.WriteLine($"Player Health:   [{new string('#', playerHealth / 10).PadRight(10)}] {playerHealth}/100");
-                        Console.WriteLine($"Computer Health: [{new string('#', computerHealth / 15).PadRight(10)}] {computerHealth}/150");
-                        Console.WriteLine($"Charge Meter: {chargeMeter}/3   Potions: {playerPotions}");
-                    }
-
-
-                    void EndGameSummary(bool playerWon, int turns)
-                    {
-                        Console.Clear();
-                        if (playerWon)
-                        {
-                            Console.WriteLine("🏆 YOU WIN LEVEL 5!!! 🏆");
-                            Console.WriteLine("You have proven your strength against the ultimate foe!");
-                        }
-                        else
-                        {
-                            Console.WriteLine("💀 YOU HAVE BEEN DEFEATED... 💀");
-                            Console.WriteLine("The computer reigns supreme... for now.");
-                        }
-
-                        Console.WriteLine($"\n--- Battle Stats ---");
-                        Console.WriteLine($"Turns Taken: {turns}");
-                        Console.WriteLine($"Potions Used: {2 - playerPotions}");
-                        Console.WriteLine($"Charge Meter at End: {chargeMeter}/3");
-                        Console.WriteLine("\nPress any key to exit...");
-                        Console.ReadKey();
-
-                    }
+                    computerHitsPlayer(PlayerHealth, ComputerHealth);
+                    Console.SetCursorPosition(0, 3);
+                    UpdateHealthBars(PlayerHealth, ComputerHealth, playerTurn);
+                    playerTurn = true;
+                    playerWin = false;
                 }
             }
+
+            // End of battle
+            ClearFromLine(6);
+            Console.SetCursorPosition(0, 6);
+            if (playerWin)
+            {
+                Console.WriteLine("                    YOU Defeated The Challenger!!");
+            }
+            else
+            {
+                Console.WriteLine("                    YOU LOSE!!!");
+            }
+            Console.Clear();
 
         }
         public static void Level6()
