@@ -7,7 +7,7 @@
         public bool playerTurn = true, playerWin = false;
         static void Main(string[] args)
         {
-        char x;
+        char x; //Variable
             do
             {
                 Console.Clear();
