@@ -993,7 +993,8 @@
                     damage = rand.Next(25) + damageBonus;
                     break;
                 default:
-                    damage = 0;
+                    //damage = 0;
+
                     break;
 
             }
