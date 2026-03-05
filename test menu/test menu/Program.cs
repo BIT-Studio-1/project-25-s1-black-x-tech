@@ -357,11 +357,6 @@ namespace test_menu
 
             UpdateHealthBars(PlayerHealth, ComputerHealth, playerTurn);
 
-            // Get input
-            //char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
-            //damage = Moves(keyInput);
-            //ComputerHealth -= damage;
-
             // Main battle loop
             while (ComputerHealth > 0 && PlayerHealth > 0)
             {
@@ -439,11 +434,6 @@ namespace test_menu
 
             UpdateHealthBars(PlayerHealth, ComputerHealth, playerTurn);
 
-            // Get input
-            char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
-            damage = Moves(keyInput);
-            ComputerHealth -= damage;
-
             // Main battle loop
             while (ComputerHealth > 0 && PlayerHealth > 0)
             {
@@ -520,11 +510,6 @@ namespace test_menu
                          ");
 
             UpdateHealthBars(PlayerHealth, ComputerHealth, playerTurn);
-
-            // Get input
-            char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
-            damage = Moves(keyInput);
-            ComputerHealth -= damage;
 
             // Main battle loop
             while (ComputerHealth > 0 && PlayerHealth > 0)
@@ -669,11 +654,6 @@ namespace test_menu
                          ");
 
             UpdateHealthBars(PlayerHealth, ComputerHealth, playerTurn);
-
-            // Get input
-            char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
-            damage = Moves(keyInput);
-            ComputerHealth -= damage;
 
             // Main battle loop
             while (ComputerHealth > 0 && PlayerHealth > 0)
@@ -982,7 +962,6 @@ namespace test_menu
             {
                 key = Char.ToUpper(Console.ReadKey().KeyChar);
             }
-            //key = key != 'I' ? key = key : Char.ToUpper(Console.ReadKey().KeyChar);
             Console.SetCursorPosition(0, 26);
 
             int damage = 0;
