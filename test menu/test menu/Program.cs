@@ -9,7 +9,7 @@ namespace test_menu
         public bool playerTurn = true, playerWin = false;
         static void Main(string[] args)
         {
-        char x;
+        char playerInput;
             do
             {
                 Console.Clear();
@@ -44,10 +44,10 @@ namespace test_menu
                             0 |  E x i t G a m e
             ");
 
-                x = Convert.ToChar(Console.ReadLine());
+                playerInput = Convert.ToChar(Console.ReadLine()); //fixing this enter key press issue
                 ClearFromLine(20);
                 Console.SetCursorPosition(0, 10);
-                switch (x)
+                switch (playerInput)
                 {
                     case '1':
                         Task1(args);
@@ -73,7 +73,7 @@ namespace test_menu
                         break;
                 }
 
-            } while (x != '0');
+            } while (playerInput != '0');
 
         }
         public static void Task1(string[] args)
@@ -1046,7 +1046,7 @@ namespace test_menu
             // Draw player health on line 3
             Console.SetCursorPosition(0, 3);
             Console.Write("PLAYER HEALTH:   ");
-            DrawColoredBar(playerHealth, 125);
+            DrawColoredBar(playerHealth);
 
             // Draw computer health on line 4
             Console.SetCursorPosition(0, 4);
