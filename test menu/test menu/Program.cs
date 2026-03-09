@@ -1,4 +1,6 @@
-﻿namespace test_menu
+﻿using System.Globalization;
+
+namespace test_menu
 {
     internal class Program
     {
@@ -355,11 +357,6 @@
 
             UpdateHealthBars(PlayerHealth, ComputerHealth, playerTurn);
 
-            // Get input
-            char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
-            damage = Moves(keyInput);
-            ComputerHealth -= damage;
-
             // Main battle loop
             while (ComputerHealth > 0 && PlayerHealth > 0)
             {
@@ -437,11 +434,6 @@
 
             UpdateHealthBars(PlayerHealth, ComputerHealth, playerTurn);
 
-            // Get input
-            char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
-            damage = Moves(keyInput);
-            ComputerHealth -= damage;
-
             // Main battle loop
             while (ComputerHealth > 0 && PlayerHealth > 0)
             {
@@ -518,11 +510,6 @@
                          ");
 
             UpdateHealthBars(PlayerHealth, ComputerHealth, playerTurn);
-
-            // Get input
-            char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
-            damage = Moves(keyInput);
-            ComputerHealth -= damage;
 
             // Main battle loop
             while (ComputerHealth > 0 && PlayerHealth > 0)
@@ -667,11 +654,6 @@
                          ");
 
             UpdateHealthBars(PlayerHealth, ComputerHealth, playerTurn);
-
-            // Get input
-            char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
-            damage = Moves(keyInput);
-            ComputerHealth -= damage;
 
             // Main battle loop
             while (ComputerHealth > 0 && PlayerHealth > 0)
@@ -976,6 +958,12 @@
         }
         public static int Moves(char key, int newDamage = 0)
         {
+            if (key == 'I')
+            {
+                key = Char.ToUpper(Console.ReadKey().KeyChar);
+            }
+            Console.SetCursorPosition(0, 26);
+
             int damage = 0;
             int damageBonus = newDamage;
 
@@ -993,7 +981,9 @@
                     damage = rand.Next(25) + damageBonus;
                     break;
                 default:
-                    damage = 0;
+                    
+                    Console.WriteLine("  You entered an invalid move enter U, R or S");
+                    Moves('I');
                     break;
 
             }

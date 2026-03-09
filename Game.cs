@@ -20,7 +20,7 @@ namespace studioTeam
 
             //Level6();
 
-
+            //Game Title animation (ASCII intro)
             // Frame 1
             Console.Clear();
             Console.WriteLine("______           _        _                 _____");
@@ -48,7 +48,7 @@ namespace studioTeam
 
 
 
-
+            // Showing game instructions and controls
             // Frame 2
             Console.Clear();
             Console.WriteLine(@"             
@@ -84,7 +84,7 @@ namespace studioTeam
             Console.ReadKey();
 
             Console.Clear();
-
+            // Story introduction
             Console.WriteLine(@"             
 
 
@@ -131,6 +131,7 @@ namespace studioTeam
             //");
             //Thread.Sleep(1500);
             //Console.Clear();
+            // Display farm scene ASCII art
             Console.WriteLine("    *     *       *     *     *   *   *         *     *       *     *     *   *   *");
             Console.WriteLine(" *       *     *       *     *      *    *     *       *     *     *   *   *");
             Console.WriteLine("    *           *    *       *     *  *           *    *       *     * ");
