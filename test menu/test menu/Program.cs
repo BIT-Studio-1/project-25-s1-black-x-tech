@@ -9,7 +9,7 @@ namespace test_menu
         public bool playerTurn = true, playerWin = false;
         static void Main(string[] args)
         {
-        char x;
+        char playerInput;
             do
             {
                 Console.Clear();
@@ -44,10 +44,10 @@ namespace test_menu
                             0 |  E x i t G a m e
             ");
 
-                x = Convert.ToChar(Console.ReadLine());
+                playerInput = Convert.ToChar(Console.ReadLine());
                 ClearFromLine(20);
                 Console.SetCursorPosition(0, 10);
-                switch (x)
+                switch (playerInput)
                 {
                     case '1':
                         Task1(args);
@@ -73,7 +73,7 @@ namespace test_menu
                         break;
                 }
 
-            } while (x != '0');
+            } while (playerInput != '0');
 
         }
         public static void Task1(string[] args)
