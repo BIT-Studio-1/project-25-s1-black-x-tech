@@ -1046,7 +1046,7 @@ namespace test_menu
             // Draw player health on line 3
             Console.SetCursorPosition(0, 3);
             Console.Write("PLAYER HEALTH:   ");
-            DrawColoredBar(playerHealth, 125);
+            DrawColoredBar(playerHealth);
 
             // Draw computer health on line 4
             Console.SetCursorPosition(0, 4);
