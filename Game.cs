@@ -946,7 +946,7 @@ namespace studioTeam
             Thread.Sleep(1000);
             return damage;
         }
-        public static int computersTurn()
+        public static int computersTurn() //Try to fix
         {
             Random rand = new Random();
             char[] moves = { 'U', 'R', 'S' };
