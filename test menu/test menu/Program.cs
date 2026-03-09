@@ -44,7 +44,7 @@ namespace test_menu
                             0 |  E x i t G a m e
             ");
 
-                playerInput = Convert.ToChar(Console.ReadLine());
+                playerInput = Convert.ToChar(Console.ReadLine()); //fixing this enter key press issue
                 ClearFromLine(20);
                 Console.SetCursorPosition(0, 10);
                 switch (playerInput)
