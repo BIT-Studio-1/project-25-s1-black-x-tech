@@ -971,14 +971,14 @@ namespace test_menu
             switch (key)
             {
                 case 'U':
-                    damage = rand.Next(15) + damageBonus;
+                    damage = rand.Next(20) + damageBonus;
                     break;
                 case 'R':
-                    damage = rand.Next(20) + damageBonus;
+                    damage = rand.Next(25) + damageBonus;
                     break;
                 case 'S':
 
-                    damage = rand.Next(25) + damageBonus;
+                    damage = rand.Next(30) + damageBonus;
                     break;
                 default:
                     
