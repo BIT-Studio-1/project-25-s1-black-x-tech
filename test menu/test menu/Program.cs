@@ -1,4 +1,6 @@
-﻿namespace test_menu
+﻿using System.Globalization;
+
+namespace test_menu
 {
     internal class Program
     {
@@ -7,7 +9,7 @@
         public bool playerTurn = true, playerWin = false;
         static void Main(string[] args)
         {
-            char x;
+        char playerInput;
             do
             {
                 Console.Clear();
@@ -42,10 +44,10 @@
                             0 |  E x i t G a m e
             ");
 
-                x = Convert.ToChar(Console.ReadLine());
+                playerInput = Convert.ToChar(Console.ReadLine());
                 ClearFromLine(20);
                 Console.SetCursorPosition(0, 10);
-                switch (x)
+                switch (playerInput)
                 {
                     case '1':
                         Task1(args);
@@ -71,7 +73,7 @@
                         break;
                 }
 
-            } while (x != '0');
+            } while (playerInput != '0');
 
         }
         public static void Task1(string[] args)
@@ -355,11 +357,6 @@
 
             UpdateHealthBars(PlayerHealth, ComputerHealth, playerTurn);
 
-            // Get input
-            char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
-            damage = Moves(keyInput);
-            ComputerHealth -= damage;
-
             // Main battle loop
             while (ComputerHealth > 0 && PlayerHealth > 0)
             {
@@ -437,11 +434,6 @@
 
             UpdateHealthBars(PlayerHealth, ComputerHealth, playerTurn);
 
-            // Get input
-            char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
-            damage = Moves(keyInput);
-            ComputerHealth -= damage;
-
             // Main battle loop
             while (ComputerHealth > 0 && PlayerHealth > 0)
             {
@@ -518,11 +510,6 @@
                          ");
 
             UpdateHealthBars(PlayerHealth, ComputerHealth, playerTurn);
-
-            // Get input
-            char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
-            damage = Moves(keyInput);
-            ComputerHealth -= damage;
 
             // Main battle loop
             while (ComputerHealth > 0 && PlayerHealth > 0)
@@ -667,11 +654,6 @@
                          ");
 
             UpdateHealthBars(PlayerHealth, ComputerHealth, playerTurn);
-
-            // Get input
-            char keyInput = Char.ToUpper(Console.ReadKey().KeyChar);
-            damage = Moves(keyInput);
-            ComputerHealth -= damage;
 
             // Main battle loop
             while (ComputerHealth > 0 && PlayerHealth > 0)
@@ -976,6 +958,12 @@
         }
         public static int Moves(char key, int newDamage = 0)
         {
+            if (key == 'I')
+            {
+                key = Char.ToUpper(Console.ReadKey().KeyChar);
+            }
+            Console.SetCursorPosition(0, 26);
+
             int damage = 0;
             int damageBonus = newDamage;
 
@@ -993,7 +981,9 @@
                     damage = rand.Next(25) + damageBonus;
                     break;
                 default:
-                    damage = 0;
+                    
+                    Console.WriteLine("  You entered an invalid move enter U, R or S");
+                    Moves('I');
                     break;
 
             }
@@ -1056,7 +1046,7 @@
             // Draw player health on line 3
             Console.SetCursorPosition(0, 3);
             Console.Write("PLAYER HEALTH:   ");
-            DrawColoredBar(playerHealth, 125);
+            DrawColoredBar(playerHealth);
 
             // Draw computer health on line 4
             Console.SetCursorPosition(0, 4);
