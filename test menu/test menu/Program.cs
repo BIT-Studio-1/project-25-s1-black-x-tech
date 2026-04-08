@@ -9,7 +9,7 @@ namespace test_menu
         public bool playerTurn = true, playerWin = false;
         static void Main(string[] args)
         {
-        char input;
+        char playerInput;
             do
             {
                 Console.Clear();
@@ -44,10 +44,10 @@ namespace test_menu
                             0 |  E x i t G a m e
             ");
 
-                input = Convert.ToChar(Console.ReadLine());
+                playerInput = Convert.ToChar(Console.ReadLine()); //fixing this enter key press issue
                 ClearFromLine(20);
                 Console.SetCursorPosition(0, 10);
-                switch (input)
+                switch (playerInput)
                 {
                     case '1':
                         Task1(args);
@@ -73,7 +73,7 @@ namespace test_menu
                         break;
                 }
 
-            } while (input != '0');
+            } while (playerInput != '0');
 
         }
         public static void Task1(string[] args)
@@ -154,7 +154,7 @@ namespace test_menu
         public static void Task4(string[] args)
         {
             Console.WriteLine("This is task 4");
-            char y;
+            char LvlInput;
             do
             {
                 ClearFromLine(20);
@@ -176,9 +176,9 @@ namespace test_menu
                                             0 |  Exit Game
             ");
 
-                y = Convert.ToChar(Console.ReadLine());
+                LvlInput = Convert.ToChar(Console.ReadLine());
                 Console.Clear();
-                switch (y)
+                switch (LvlInput)
                 {
                     case '1':
                         Level1();
@@ -209,7 +209,7 @@ namespace test_menu
                         break;
                 }
 
-            } while (y != '0');
+            } while (LvlInput != '0');
 
         }
         public static void Story()
@@ -1046,7 +1046,7 @@ namespace test_menu
             // Draw player health on line 3
             Console.SetCursorPosition(0, 3);
             Console.Write("PLAYER HEALTH:   ");
-            DrawColoredBar(playerHealth, 125);
+            DrawColoredBar(playerHealth);
 
             // Draw computer health on line 4
             Console.SetCursorPosition(0, 4);
