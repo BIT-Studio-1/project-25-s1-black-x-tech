@@ -154,7 +154,7 @@ namespace test_menu
         public static void Task4(string[] args)
         {
             Console.WriteLine("This is task 4");
-            char y;
+            char LvlInput;
             do
             {
                 ClearFromLine(20);
@@ -176,9 +176,9 @@ namespace test_menu
                                             0 |  Exit Game
             ");
 
-                y = Convert.ToChar(Console.ReadLine());
+                LvlInput = Convert.ToChar(Console.ReadLine());
                 Console.Clear();
-                switch (y)
+                switch (LvlInput)
                 {
                     case '1':
                         Level1();
@@ -209,7 +209,7 @@ namespace test_menu
                         break;
                 }
 
-            } while (y != '0');
+            } while (LvlInput != '0');
 
         }
         public static void Story()
